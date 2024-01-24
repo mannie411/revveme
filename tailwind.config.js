@@ -43,10 +43,21 @@ export default {
         wide: "1440px",
       },
     },
+
     animation: {
+      "slideIn-left": "slideIn-left .6s ease-in-out forwards var(--delay, 0)",
+      scaleIn: "scaleIn .8s ease-in-out forwards var(--delay, 0)",
       wiggle: "wiggle 1s ease-in-out infinite",
     },
     keyframes: {
+      "slideIn-left": {
+        "0%": { opacity: 0, transform: "translateX(-100%)" },
+        "100%": { opacity: 1, transform: "translateX(0)" },
+      },
+      scaleIn: {
+        "0%": { opacity: 0.5, transform: "scale(0.5)" },
+        "100%": { opacity: 1, transform: "scale(1)" },
+      },
       wiggle: {
         "0%, 100%": { transform: "rotate(-3deg)" },
         "50%": { transform: "rotate(3deg)" },

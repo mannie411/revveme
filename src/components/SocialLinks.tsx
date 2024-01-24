@@ -9,8 +9,11 @@ import {
 
 const SocialLinks = () => {
   return (
-    <div className="my-8">
-      <ul className="flex space-x-2">
+    <div
+      className="my-8 animate-slideIn-left opacity-0 "
+      style={{ "--delay": 0.55 + "s" }}
+    >
+      <ul className="flex space-x-2 justify-center md:justify-start">
         {socialLinks.map(({ path, icon }, idx) => (
           <li key={icon}>
             <a href={`${path}`} target="_blank" rel="noopener noreferrer">

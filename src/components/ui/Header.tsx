@@ -48,8 +48,10 @@ const Header: FC<HeaderProps> = ({ links = subLinks }) => {
         </div>
       </div>
       <div
-        className={`absolute  max-lg:block w-full ${
-          !isToggle ? "show" : "transition-all ease-in-out invisible opacity-0"
+        className={`absolute shadow-md max-lg:block w-full ${
+          !isToggle
+            ? "show"
+            : "transition-all ease-in-out invisible opacity-0  scale-y-0"
         } bg-white z-50 top-[4rem]
            
           `}
