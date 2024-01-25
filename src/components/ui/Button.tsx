@@ -6,6 +6,7 @@ type Variant = "default" | "icon";
 interface ButtonProps extends ComponentProps {
   icon?: ReactElement | any;
   label: string;
+  onClick?: () => void;
   variant?: Variant;
   type?: "button" | "submit";
 }
@@ -14,6 +15,7 @@ const Button: FC<ButtonProps> = ({
   className,
   icon,
   label,
+  onClick,
   variant = "default",
   type = "button",
 }) => {
@@ -21,12 +23,14 @@ const Button: FC<ButtonProps> = ({
     <Fragment>
       {variant === "default" && (
         <button
-          className={`text-white bg-primary p-3 w-100 ${
+          className={`flex justify-center items-center gap-1 text-white bg-primary p-3 w-100 rounded-[.3rem] ${
             className && className
           }`}
+          onClick={onClick}
           type={type}
         >
-          {label}
+          <span>{label} </span>
+          {icon && icon}
         </button>
       )}
       {variant === "icon" && (

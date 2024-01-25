@@ -22,26 +22,29 @@ export async function middleware(req: NextRequest) {
     return NextResponse.rewrite(req.nextUrl);
   }
 
-  if (paths.includes(req.nextUrl.pathname)) {
-    return NextResponse.next();
-  }
-
   try {
     // Check whether the maintenance page should be shown
     // const isInMaintenanceMode = await get<boolean>("isInMaintenanceMode");
     const mode = process.env.MODE;
-    const comingSoon = process.env.MODE;
 
     // If is in maintenance mode, point the url pathname to the maintenance page
-    if (mode === "true" && comingSoon === "true") {
-      req.nextUrl.pathname = `/coming-soon`;
+    if (mode === "isMaintenance") {
+      req.nextUrl.pathname = "/maintenance";
 
-      // Rewrite to the url
       return NextResponse.rewrite(req.nextUrl);
     }
 
-    req.nextUrl.pathname = "/maintenance";
-    return NextResponse.rewrite(req.nextUrl);
+    if (mode === "isComingSoon") {
+      if (paths.includes(req.nextUrl.pathname)) {
+        return NextResponse.next();
+      }
+
+      req.nextUrl.pathname = `/coming-soon`;
+
+      return NextResponse.rewrite(req.nextUrl);
+    }
+
+    return NextResponse.next();
   } catch (error) {
     // show the default page if EDGE_CONFIG env var is missing,
     // but log the error to the console
