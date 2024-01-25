@@ -12,12 +12,13 @@ import { NextPageWithLayout } from "@app/types";
 
 // images
 import mockup1 from "../../public/revve-mockup.png";
+import { subLinks } from "@app/utils/constants";
 
 const Page: NextPageWithLayout = () => {
   return (
     <Fragment>
       <Head title="Coming - Soon" />
-      <Layout isFooter={false}>
+      <Layout isFooter={false} links={subLinks}>
         <View>
           <section className="flex max-container px-4 lg:px-10 min-h-screen overflow-y-hidden">
             <div className="relative flex-1 pt-[8rem] lg:pt-[16rem] ">

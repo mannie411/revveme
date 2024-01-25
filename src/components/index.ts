@@ -1,4 +1,5 @@
 import NoSSR from "./NoSSR";
 import SocialLinks from "./SocialLinks";
+import Markdown from "./Markdown";
 
-export { NoSSR, SocialLinks };
+export { Markdown, NoSSR, SocialLinks };

@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { FC, Fragment, useState } from "react";
 import Link from "next/link";
 
 import { ComponentProps, LinkProps } from "@app/types";
@@ -11,7 +11,7 @@ interface HeaderProps extends ComponentProps {
   links?: LinkProps[];
 }
 
-const Header: FC<HeaderProps> = ({ links = subLinks }) => {
+const Header: FC<HeaderProps> = ({ links }) => {
   const [isToggle, setIsToggle] = useState<boolean>(true);
 
   return (
@@ -23,29 +23,31 @@ const Header: FC<HeaderProps> = ({ links = subLinks }) => {
           </Link>
         </div>
 
-        <nav className="flex  items-center max-lg:hidden justify-end w-full">
-          <ul className="flex  items-center gap-5">
-            {links?.map(({ path, label }, idx) => (
-              <li key={label + idx}>
-                <Link href={path}>{label}</Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <Fragment>
+          <nav className="flex  items-center max-lg:hidden justify-end w-full">
+            <ul className="flex  items-center gap-5">
+              {links?.map(({ path, label }, idx) => (
+                <li key={label + idx}>
+                  <Link href={path}>{label}</Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
 
-        <div className="hidden max-lg:block">
-          {isToggle && (
-            <span role="button" onClick={() => setIsToggle(!isToggle)}>
-              <MenuIcon />
-            </span>
-          )}
+          <div className="hidden max-lg:block">
+            {isToggle && (
+              <span role="button" onClick={() => setIsToggle(!isToggle)}>
+                <MenuIcon />
+              </span>
+            )}
 
-          {!isToggle && (
-            <span role="button" onClick={() => setIsToggle(!isToggle)}>
-              <CloseIcon />
-            </span>
-          )}
-        </div>
+            {!isToggle && (
+              <span role="button" onClick={() => setIsToggle(!isToggle)}>
+                <CloseIcon />
+              </span>
+            )}
+          </div>
+        </Fragment>
       </div>
       <div
         className={`absolute shadow-md max-lg:block w-full ${

@@ -38,10 +38,6 @@ h5 {
   font-family: var(--font-paytone);
 }
 
-li {
-  list-style: none;
-}
-
 @layer components {
   .max-container {
     max-width: 1440px;
@@ -89,4 +85,23 @@ li {
   .info-text {
     @apply font-montserrat text-slate-gray text-lg leading-7;
   }
+}
+
+.markdown > ol {
+  list-style-type: decimal;
+}
+
+.markdown > ul {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.markdown > h1,
+.markdown > h2,
+.markdown > h3,
+.markdown > h4,
+.markdown > h5,
+.markdown > h6,
+.markdown > p {
+  margin-bottom: 0.5rem;
 }

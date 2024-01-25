@@ -1,8 +1,33 @@
 import React from "react";
-import { NextPageWithLayout } from "@app/types";
 
-const Page: NextPageWithLayout = () => {
-  return <div>Page</div>;
+import { DataProp } from "@app/types";
+import { Layout, View } from "@app/components/ui";
+import { subLinks } from "@app/utils/constants";
+import { getMarkdownData } from "@app/utils";
+import { Markdown } from "@app/components";
+
+const Page = ({ data }: { data: DataProp }) => {
+  const { slug, content } = data;
+  return (
+    <Layout isFooter={false} links={subLinks}>
+      <View>
+        <section className="max-container px-4 py-16 lg:px-10 min-h-screen">
+          <div className="my-16 px-4 lg:px-16">
+            <h2 className="text-2xl text-center mb-3">Privacy Policy</h2>
+            <Markdown content={content} />
+          </div>
+        </section>
+      </View>
+    </Layout>
+  );
+};
+
+export const getServerSideProps = async () => {
+  // Fetch data from external API
+  const data = getMarkdownData("privacy.md");
+
+  // Pass data to the page via props
+  return { props: { data } };
 };
 
 export default Page;

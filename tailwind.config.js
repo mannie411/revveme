@@ -17,7 +17,7 @@ export default {
       base: ["1rem", "1.25rem"],
       lg: ["1.5rem", "1.8rem"],
       xl: ["1.8rem", "2rem"],
-      "2xl": ["2.5", "3rem"],
+      "2xl": ["2.5rem", "3rem"],
       "3xl": ["3.8rem", "4.5rem"],
       "4xl": ["4.5rem", "5rem"],
       "8xl": ["96px", "106px"],

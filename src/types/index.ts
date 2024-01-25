@@ -17,3 +17,8 @@ export interface ComponentProps extends PropsWithChildren {
 }
 
 export type LinkProps = { path: string; label: string };
+
+export type DataProp = {
+  content: string;
+  slug: string;
+};
