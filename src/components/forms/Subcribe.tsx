@@ -9,7 +9,8 @@ const SubcriberForm = () => {
   return (
     <form
       onSubmit={onSubmit}
-      className="border border-slate-gray my-4 p-2 rounded"
+      className="flex flex-col lg:flex-row border border-slate-gray my-4 p-2 rounded animate-slideIn-left opacity-0 "
+      style={{ "--delay": 0.5 + "s" }}
     >
       <Input
         placeholder="example@mail.com"

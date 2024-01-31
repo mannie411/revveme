@@ -1,5 +1,7 @@
 import { LinkProps } from "@app/types";
 
+export const menuLinks: LinkProps[] = [];
+
 export const subLinks: LinkProps[] = [
   { path: "/privacy-policy", label: "Privacy & Policies" },
   { path: "/terms", label: "Terms of use " },

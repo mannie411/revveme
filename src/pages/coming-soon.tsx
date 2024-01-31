@@ -12,31 +12,52 @@ import { NextPageWithLayout } from "@app/types";
 
 // images
 import mockup1 from "../../public/revve-mockup.png";
+import { subLinks } from "@app/utils/constants";
 
 const Page: NextPageWithLayout = () => {
   return (
     <Fragment>
       <Head title="Coming - Soon" />
-      <Layout isFooter={false}>
+      <Layout isFooter={false} links={subLinks}>
         <View>
-          <section className="flex max-container px-4 lg:px-10 min-h-screen">
+          <section className="flex max-container px-4 lg:px-10 min-h-screen overflow-y-hidden">
             <div className="relative flex-1 pt-[8rem] lg:pt-[16rem] ">
-              <h5 className="text-lg text-primary flex items-center mb-4 lg:mb-8">
+              <h5
+                className="animate-slideIn-left opacity-0 text-lg text-primary flex  justify-center md:justify-start items-center mb-4 lg:mb-8"
+                style={{ "--delay": 0.4 + "s" }}
+              >
                 <div className="bg-primary w-[10px] h-[3px] inline-block mr-2" />
                 Coming soon
               </h5>
-              <h1 className="text-3xl lg:text-4xl  text-dark-1 mb-4 lg:mb-8">
-                <span>Get Notified</span>
+              <h1 className="text-3xl lg:text-4xl  text-dark-1 mb-4 lg:mb-8 text-center md:text-start">
+                <span
+                  className="animate-slideIn-left opacity-0 inline-block"
+                  style={{ "--delay": 0.25 + "s" }}
+                >
+                  Get Notified
+                </span>
                 <br />
-                <span>When we Launch</span>
+                <span
+                  className="animate-slideIn-left opacity-0 inline-block"
+                  style={{ "--delay": 0.35 + "s" }}
+                >
+                  When we Launch
+                </span>
               </h1>
-              <p className="text-dark-2 mb-4 lg:mb-8">
+              <p
+                className="animate-slideIn-left opacity-0  text-dark-2 text-center md:text-start my-6 lg:mb-8 "
+                style={{ "--delay": 0.45 + "s" }}
+              >
                 Send, Swap, Shop - Your Passport to Easy Worldwide Play.
               </p>
+
               <SubcribeForm />
               <SocialLinks />
             </div>
-            <div className="flex-1 hidden lg:block ">
+            <div
+              className="flex-1 hidden lg:block animate-scaleIn opacity-0 text-xl my-2"
+              style={{ "--delay": 0.25 + "s" }}
+            >
               <Image src={mockup1} alt={"Revve App Mockup"} />
             </div>
           </section>

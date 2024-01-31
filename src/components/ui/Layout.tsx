@@ -1,15 +1,22 @@
 import React, { FC, Fragment } from "react";
-import { ComponentProps } from "@app/types";
 import { Footer, Header } from ".";
+import { ComponentProps, LinkProps } from "@app/types";
 
 interface LayoutProp extends ComponentProps {
+  isNav?: boolean;
   isFooter?: boolean;
+  links?: LinkProps[];
 }
 
-const Layout: FC<LayoutProp> = ({ children, isFooter = true }) => {
+const Layout: FC<LayoutProp> = ({
+  children,
+  links,
+  isFooter = true,
+  isNav = true,
+}) => {
   return (
     <Fragment>
-      <Header />
+      <Header links={links} isNav={isNav} />
       {children}
       {isFooter && <Footer />}
     </Fragment>
