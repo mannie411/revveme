@@ -9,7 +9,7 @@ import { Markdown } from "@app/components";
 const Page = ({ data }: { data: DataProp }) => {
   const { slug, content } = data;
   return (
-    <Layout isFooter={false} links={subLinks}>
+    <Layout>
       <Head title="Privacy Policy" />
       <View>
         <section className="max-container px-4 py-16 lg:px-10 min-h-screen">

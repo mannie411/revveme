@@ -8,7 +8,7 @@ import { subLinks } from "@app/utils/constants";
 const Page = ({ data }: { data: DataProp }) => {
   const { slug, content } = data;
   return (
-    <Layout isFooter={false} links={subLinks}>
+    <Layout>
       <Head title="Terms of use" />
       <View>
         <section className="max-container px-4 py-16 lg:px-10 min-h-screen">
