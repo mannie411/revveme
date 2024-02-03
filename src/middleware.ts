@@ -22,6 +22,7 @@ export async function middleware(req: NextRequest) {
     return NextResponse.rewrite(req.nextUrl);
   }
 
+  return;
   try {
     // Check whether the maintenance page should be shown
     // const isInMaintenanceMode = await get<boolean>("isInMaintenanceMode");

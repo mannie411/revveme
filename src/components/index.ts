@@ -1,5 +1,9 @@
+import Contact from "./Contact";
+import CTA from "./CTA";
+import FAQ from "./FAQ";
+import Markdown from "./Markdown";
 import NoSSR from "./NoSSR";
 import SocialLinks from "./SocialLinks";
-import Markdown from "./Markdown";
+import Testimonial from "./Testimonial";
 
-export { Markdown, NoSSR, SocialLinks };
+export { Contact, CTA, FAQ, Markdown, NoSSR, SocialLinks, Testimonial };

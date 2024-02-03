@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import Image from "next/image";
-import { Layout, View, Button, Head } from "@app/components/ui";
+import { Layout, View, Button, Head, Header } from "@app/components/ui";
 import { RigthArrowIcon } from "@app/components/icons";
 
 import cloud from "../../public/cloud.svg";
@@ -14,7 +14,8 @@ const Page = () => {
   return (
     <Fragment>
       <Head title="Not Found" />
-      <Layout isFooter={false} isNav={false}>
+      <Layout>
+        <Header />
         <View>
           <section className="flex max-container px-4 lg:px-10 min-h-screen overflow-y-hidden">
             <div className="relative flex-1 pt-[8rem] lg:pt-[16rem] ">

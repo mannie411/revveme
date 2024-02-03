@@ -7,6 +7,10 @@ const dark = {
   1: "#232323",
   2: "#1D1B20",
   3: "#5C5C5C",
+  4: "#979797",
+  5: "#4C4D50",
+  6: "#1D1D1D",
+  7: "#1B1B1B",
 };
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -18,18 +22,21 @@ export default {
       lg: ["1.5rem", "1.8rem"],
       xl: ["1.8rem", "2rem"],
       "2xl": ["2.5rem", "3rem"],
-      "3xl": ["3.8rem", "4.5rem"],
+      "3xl": ["3.8rem", "4.75rem"],
       "4xl": ["4.5rem", "5rem"],
       "8xl": ["96px", "106px"],
     },
     extend: {
       fontFamily: {
+        "dm-sans": ["var(--font-dm-sans)", ...fontFamily.sans],
         inter: ["var(--font-inter)", ...fontFamily.sans],
         paytone: ["var(--font-paytone)", ...fontFamily.sans],
       },
       colors: {
-        primary: "#4F0072",
+        primary: "#76448A",
+        secondary: "#4F0072",
         dark,
+        accent: "#6019800A",
         "coral-red": "#FF6452",
         "slate-gray": "#6D6D6D",
         "pale-blue": "#F5F6FF",

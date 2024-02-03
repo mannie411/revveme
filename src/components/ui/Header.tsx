@@ -12,29 +12,33 @@ interface HeaderProps extends ComponentProps {
   isNav?: boolean;
 }
 
-const Header: FC<HeaderProps> = ({ links, isNav }) => {
+const Header: FC<HeaderProps> = ({ links, isNav = true, children }) => {
   const [isToggle, setIsToggle] = useState<boolean>(true);
 
   return (
-    <header className="absolute w-full z-[999]">
+    <header className="fixed top-0 w-full z-[999] bg-white">
       {isNav && (
         <Fragment>
-          <div className=" relative max-container flex items-center justify-between w-full h-16  px-4  py-12 z-[100]">
+          <div className=" relative max-container flex items-center justify-between w-full h-16  px-4  py-12 z-[100] ">
             <div>
               <Link href={"/"}>
                 <Logo />
               </Link>
             </div>
 
-            <nav className="flex  items-center max-lg:hidden justify-end w-full">
-              <ul className="flex  items-center gap-5">
-                {links?.map(({ path, label }, idx) => (
-                  <li key={label + idx}>
-                    <Link href={path}>{label}</Link>
-                  </li>
-                ))}
-              </ul>
-            </nav>
+            <div className="flex justify-between items-center max-lg:hidden w-full ">
+              <nav className="flex  flex-1 items-center  justify-center ">
+                <ul className="flex  items-center gap-5">
+                  {links?.map(({ path, label }, idx) => (
+                    <li key={label + idx}>
+                      <Link href={path}>{label}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+
+              {children && children}
+            </div>
 
             <div className="hidden max-lg:block">
               {isToggle && (
@@ -66,6 +70,7 @@ const Header: FC<HeaderProps> = ({ links, isNav }) => {
                     <Link href={path}>{label}</Link>
                   </li>
                 ))}
+                {children && <ul>{children}</ul>}
               </ul>
             </nav>
           </div>
