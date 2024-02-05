@@ -16,7 +16,7 @@ const Footer: FC<FooterProps> = ({ children }) => {
           <div>
             <Image src={logoWhite} alt="Logo" />
           </div>
-          <p className=" my-8">
+          <p className="text-white my-8">
             Hello, we are moduscreate. Our goal is to translate the positive
             effects from revolutionizing how companies engage with their clients
             & their team
@@ -36,7 +36,7 @@ const Footer: FC<FooterProps> = ({ children }) => {
           `}
         >
           {children && children}
-          <nav>
+          <nav className="my-6">
             <h5 className="mb-6">Menu</h5>
             <ul className="flex flex-col gap-3">
               {menuLinks.map(({ path, label }, idx) => (

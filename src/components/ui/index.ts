@@ -7,4 +7,6 @@ import Layout from "./Layout";
 import Logo from "./Logo";
 import View from "./View";
 
+export * from "./Layout";
+
 export { Button, Footer, Head, Header, Input, Layout, Logo, View };

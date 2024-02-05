@@ -22,7 +22,9 @@ body {
 
 html,
 body {
-  font-family: var(--font-dm-sans) var(--font-inter);
+  font-family: var(--font-dm-sans), var(--font-inter), system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue", sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -35,25 +37,64 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: var(--font-paytone);
+  font-family: var(--font-paytone), var(--font-dm-sans), var(--font-inter);
+}
+
+@layer base {
+  h1 {
+    @apply text-xxl md:text-3xl  text-dark-1 font-bold;
+  }
+
+  h2 {
+    @apply text-xl md:text-2xl font-semibold text-dark-1;
+  }
+
+  h3 {
+    @apply text-lg md:text-xxl font-bold text-dark-1;
+  }
+
+  h4 {
+    @apply text-base font-semibold;
+  }
+
+  h5 {
+    @apply text-base font-normal;
+  }
+
+  p {
+    @apply text-base text-dark-2 font-normal;
+  }
 }
 
 @layer components {
+  .btn {
+    @apply flex justify-center items-center gap-1 text-white bg-primary p-3  rounded-[.3rem] transition-all hover:bg-primary/75;
+  }
+
   .max-container {
     max-width: 1440px;
     margin: 0 auto;
   }
 
   .input {
-    @apply sm:flex-1 max-sm:w-full text-base leading-normal text-slate-gray pl-5 max-sm:p-5 outline-none sm:border-none border max-sm:border-slate-gray max-sm:rounded-full;
+    @apply sm:flex-1 max-sm:w-full text-base 
+    leading-normal text-slate-gray pl-5 max-sm:p-5 
+    outline-none sm:border-none border max-sm:border-slate-gray 
+    max-sm:rounded-full;
   }
 
   .input-2 {
-    @apply block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6;
+    @apply block w-full rounded-md border-0 py-1.5 
+    text-gray-900 shadow-sm ring-1 ring-inset 
+    ring-gray-300 placeholder:text-gray-400 focus:ring-2 
+    focus:ring-inset focus:ring-primary
+    sm:text-sm sm:leading-6;
   }
 
   .show {
-    @apply transition-all ease-in-out duration-200  visible scale-y-100 origin-top  opacity-100 h-auto;
+    @apply transition-all ease-in-out duration-200  
+    visible scale-y-100 origin-top  
+    opacity-100 h-auto;
   }
 
   .hide {
@@ -61,25 +102,82 @@ h5 {
   }
 
   .card {
-    @apply rounded p-6;
+    @apply rounded-lg p-6 z-10;
   }
-  .card.transparent {
-    /* background: linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 0.3) 0%,
-        rgba(255, 255, 255, 0) 100%
-      ),
-      linear-gradient(
-        0deg,
-        rgba(255, 255, 255, 0.04),
-        rgba(255, 255, 255, 0.04)
-      ); */
 
+  .card.transparent {
+    position: relative;
+    background: /*linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ), */ linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.04),
+      rgba(255, 255, 255, 0.04)
+    );
+  }
+
+  .card.transparent::before {
+    content: "";
+    border: 1px solid;
+    border-radius: inherit;
     border-image-source: linear-gradient(
       180deg,
       rgba(255, 255, 255, 0.56) 0%,
       rgba(255, 255, 255, 0) 100%
     );
+    border-image-slice: 1;
+    inset: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    z-index: -1;
+  }
+
+  .link {
+    @apply text-dark-5 text-sm;
+  }
+
+  .link .active {
+    @apply text-primary  pb-2 lg:border-b-2 font-bold border-primary border-solid;
+  }
+
+  .slider {
+    @apply relative max-w-screen-lg min-w-full mx-auto transition-all duration-500 ease-linear;
+  }
+
+  .slider .slider-btn {
+    @apply hidden md:block mx-2;
+  }
+
+  .slider .slides {
+    @apply scrollbar-hide flex snap-x snap-mandatory
+     overflow-hidden overflow-x-auto gap-3
+     scroll-smooth before:w-[45vw] 
+     before:shrink-0 after:w-[45vw] 
+     after:shrink-0 md:before:w-0 md:after:w-0;
+  }
+
+  .slides .slide {
+    @apply shrink-0 snap-always flex-none 
+    grow-0 snap-center overflow-hidden  w-[20rem]
+    md:max-w-[24rem] bg-white shadow-xl rounded-md px-[4rem] py-[6rem];
+  }
+
+  .ft-img {
+    position: relative;
+    z-index: 5;
+    @apply before:content-[''] before:w-full before:h-[45%] before:object-cover 
+    before:absolute before:bottom-0  before:bg-mockup-bg before:bg-contain 
+    before:bg-bottom before:bg-no-repeat before:z-0 after:content-[''] 
+    after:w-full lg:after:w-[80%] after:h-full 
+    after:absolute after:bottom-0 lg:after:left-[10%]
+    after:bg-mockup-fg after:bg-contain after:bg-no-repeat 
+    after:bg-bottom after:z-10;
   }
 }
 
@@ -131,9 +229,14 @@ h5 {
 .markdown > h3,
 .markdown > h4,
 .markdown > h5,
-.markdown > h6,
-.markdown > p {
-  margin-bottom: 0.5rem;
+.markdown > h6 {
+  margin-block: 1rem;
+}
+
+.markdown > p,
+.markdown > ul,
+.markdown > ol {
+  margin-bottom: 1.25rem;
 }
 
 .bg-purple-gradient {
@@ -147,13 +250,16 @@ h5 {
 }
 
 .cta,
-.info-graph {
+.info-graph,
+.values {
   position: relative;
   z-index: 10;
 }
 
 .cta::after,
-.info-graph::after {
+.info-graph::after,
+.values::before,
+.values::after {
   content: "";
   position: absolute;
   height: 100%;
@@ -172,8 +278,30 @@ h5 {
 
 .cta::after {
   background: url("../../public/Oval@2x.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.values::before {
+  background: url("../../public/about-oval.svg");
   background-size: contain;
-  background-position: center;
+  background-position: bottom;
+  background-repeat: no-repeat;
+
+  height: 30%;
+  width: 30%;
+
+  bottom: 0;
+  right: 0;
+  top: auto;
+  left: auto;
+}
+
+.values::after {
+  background: url("../../public/about-oval-1.svg");
+  background-size: contain;
+  background-position: 0% 100%;
   background-repeat: no-repeat;
 }
 

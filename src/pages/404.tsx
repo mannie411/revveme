@@ -52,7 +52,7 @@ const Page = () => {
                 />
               </div>
             </div>
-            <div className="hidden lg:block">
+            <div className="hidden lg:block relative z-[1000]">
               <div className="relative">
                 <div
                   className="relative w-full z-20 animate-slideIn-top opacity-0"

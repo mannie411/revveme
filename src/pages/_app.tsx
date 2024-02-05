@@ -21,7 +21,7 @@ function App({ Component, pageProps }: AppPropsWithLayout) {
       <style>
         {`
           :root {
-            --font-dm-sans: ${dmSans.style.fontFamily}
+            --font-dm-sans: ${dmSans.style.fontFamily};
             --font-inter: ${inter.style.fontFamily};
             --font-paytone: ${paytone.style.fontFamily};
           }

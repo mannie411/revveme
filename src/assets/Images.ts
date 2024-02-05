@@ -11,8 +11,13 @@ import roundleft from "../../public/arrow-round-l.svg";
 import roundRight from "../../public/arrow-round-r.svg";
 import map from "../../public/map.svg";
 
+import heroRing from "../../public/ring.svg";
+import mockupBg from "../../public/mockup-bg.svg";
+import mockupFg from "../../public/mockup-bg.svg";
+
 // PNG's
 import revveP from "../../public/revve-p.svg";
+import revveM from "../../public/revve-mockup.png";
 import cbn from "../../public/cbn.png";
 import ndic from "../../public/ndic.png";
 import ngMd from "../../public/ng-md.png";
@@ -39,7 +44,29 @@ import featureImg3I from "../../public/mockup-i-f3.png";
 import featureImg4I from "../../public/mockup-i-f4.png";
 import featureImg5I from "../../public/mockup-i-f5.png";
 
+import bl from "../../public/bl-small.png";
+import br from "../../public/br-small.png";
+import tl from "../../public/tl-small.png";
+import tr from "../../public/tr-small.png";
+
+import us from "../../public/us-small.png";
+import uk from "../../public/uk-small.png";
+import ca from "../../public/ca-small.png";
+import ng from "../../public/ng-small.png";
+
 export {
+  revveM,
+  heroRing,
+  mockupBg,
+  mockupFg,
+  bl,
+  br,
+  tl,
+  tr,
+  us,
+  uk,
+  ca,
+  ng,
   logo,
   logoWhite,
   revveP,

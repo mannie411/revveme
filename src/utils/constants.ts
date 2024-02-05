@@ -38,6 +38,12 @@ export const testimonails = [
     role: "Business Owner",
   },
   {
+    imgUrl: "testimonial-3.png",
+    name: "Grace Faleti",
+    content: `“Would confidently recommend this application to anyone looking for a seamless payment and transfer”`,
+    role: "Student",
+  },
+  {
     imgUrl: "testimonial-2.png",
     name: "Sarah Anifowoshe",
     content: `“Would confidently recommend this application to anyone looking for a seamless payment and transfer”`,
@@ -48,6 +54,12 @@ export const testimonails = [
     name: "Grace Faleti",
     content: `“Would confidently recommend this application to anyone looking for a seamless payment and transfer”`,
     role: "Student",
+  },
+  {
+    imgUrl: "testimonial-1.png",
+    name: "James Nduka",
+    content: `“Would confidently recommend this application to anyone looking for a seamless payment and transfer”`,
+    role: "Business Owner",
   },
 ];
 

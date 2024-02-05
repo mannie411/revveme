@@ -1,21 +1,42 @@
-import React from "react";
+import React, { useRef, useEffect, MouseEventHandler } from "react";
 import Image from "next/image";
 import { testimonails } from "@app/utils/constants";
 import { roundRight, roundleft } from "@app/assets";
 
 const Testimonial = () => {
+  const sliderRef = useRef<HTMLDivElement>(null);
+
+  const gotoPrevSlide = (evt: any) => {
+    evt.stopPropagation();
+    if (sliderRef.current) {
+      const slider = sliderRef.current;
+      const slideWidth = slider.clientWidth;
+      slider.scrollLeft -= slideWidth;
+    }
+  };
+
+  const gotoNextSlide = (evt: any) => {
+    if (sliderRef.current) {
+      const slider = sliderRef.current;
+      console.log(screenLeft);
+
+      const slideWidth = slider.clientWidth;
+      slider.scrollLeft += slideWidth;
+    }
+  };
+
   return (
-    <div className="flex items-center">
-      <div>
-        <Image src={roundleft} alt="Left Arrow" />
-      </div>
-      <div className="flex-1">
-        <div className="flex mx-6 space-x-4 my-[2rem] ">
+    <div className="slider ">
+      <div className="flex items-center ">
+        <div className="slider-btn">
+          <button id="prev" className="slider-btn" onClick={gotoPrevSlide}>
+            <Image src={roundleft} alt="Left Arrow" />
+          </button>
+        </div>
+
+        <div ref={sliderRef} className="flex-1 slides ">
           {testimonails.map(({ imgUrl, content, name, role }, idx) => (
-            <div
-              key={idx}
-              className="bg-white shadow-xl rounded-md px-[4rem] py-[6rem]"
-            >
+            <div key={idx} id={`slide-${idx + 1}`} className="slide ">
               <div className="flex flex-col items-center justify-center text-center space-y-6">
                 <div>
                   <Image src={`/${imgUrl}`} alt={name} width={75} height={75} />
@@ -30,14 +51,19 @@ const Testimonial = () => {
             </div>
           ))}
         </div>
-        <div className="flex space-x-1 justify-center">
-          <span className="bg-white rounded-full h-2 w-2"></span>
-          <span className="bg-white opacity-60 rounded-full h-2 w-2"></span>
-          <span className="bg-white opacity-60 rounded-full h-2 w-2"></span>
+
+        <div className="slider-btn">
+          <button id="next" onClick={gotoNextSlide}>
+            <Image src={roundRight} alt="Right Arrow" />
+          </button>
         </div>
       </div>
-      <div>
-        <Image src={roundRight} alt="Right Arrow" />
+
+      <div className="flex space-x-1 justify-center my-16">
+        {}
+        <span className="bg-white rounded-full h-2 w-2"></span>
+        <span className="bg-white opacity-60 rounded-full h-2 w-2"></span>
+        <span className="bg-white opacity-60 rounded-full h-2 w-2"></span>
       </div>
     </div>
   );

@@ -12,14 +12,14 @@ import {
 const CTA = () => {
   return (
     <div className="bg-purple-gradient rounded cta">
-      <div className="flex flex-col lg:flex-row p-4 lg:py-10 lg:px-14">
-        <div className="flex-1 text-white my-auto">
-          <h3 className="text-lg lg:text-2xl">
+      <div className="flex flex-col lg:flex-row px-4  lg:px-[4rem] py-[6rem] ">
+        <div className="flex-1  my-auto">
+          <h3 className=" text-white">
             Download the Revve
             <br />
             Mobile App
           </h3>
-          <p className="my-8">
+          <p className=" text-white my-8">
             Making payment on purchase of your favorite products just got better
             and more awesome. Enjoy the amazing experience!!!
           </p>
@@ -33,14 +33,14 @@ const CTA = () => {
           </div>
         </div>
         <div className="flex-1">
-          <div className="w-full h-[18rem] lg:h-auto">
+          <div className="relative w-full mt-8 ">
             <Image
-              className="inline-block"
+              className="relative left-[10%] inline-block max-sm:w-[45%] z-10 "
               src={mockupImg1}
               alt="Phone Image 1"
             />
             <Image
-              className="inline-block"
+              className="relative top-[15%] inline-block max-sm:w-[50%] "
               src={mockupImg2}
               alt="Phone Image 2"
             />

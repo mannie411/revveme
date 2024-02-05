@@ -1,7 +1,7 @@
 import React from "react";
 
 import { DataProp } from "@app/types";
-import { Head, Layout, View } from "@app/components/ui";
+import { Head, Header, Layout, View } from "@app/components/ui";
 import { subLinks } from "@app/utils/constants";
 import { getMarkdownData } from "@app/utils";
 import { Markdown } from "@app/components";
@@ -11,6 +11,8 @@ const Page = ({ data }: { data: DataProp }) => {
   return (
     <Layout>
       <Head title="Privacy Policy" />
+      <Header links={subLinks} isNav={true} />
+
       <View>
         <section className="max-container px-4 py-16 lg:px-10 min-h-screen">
           <div className="my-16 px-4 lg:px-[14rem]">

@@ -92,7 +92,7 @@ const ContactForm = () => {
       </div>
 
       <Button
-        className="max-sm:w-full w-[20%] rounded"
+        className="max-sm:w-full md:w-[50%] rounded"
         label="Send message"
         type="submit"
       />

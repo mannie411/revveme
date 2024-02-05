@@ -1,33 +1,30 @@
 import React, { Fragment } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Button, Footer, Head, Header, Layout, View } from "@app/components/ui";
-import { CTA, Contact, FAQ, Testimonial } from "@app/components";
+import { BaseLayout, Head, View } from "@app/components/ui";
+import { CTA, Contact, FAQ, Features, Testimonial } from "@app/components";
 import { NextPageWithLayout } from "@app/types";
-import { menuLinks } from "@app/utils/constants";
 import {
   aboutImg1,
   appstore,
+  bl,
+  br,
+  ca,
   caMd,
   cbn,
-  download,
-  featureImg1,
-  featureImg1I,
-  featureImg2,
-  featureImg2I,
-  featureImg3,
-  featureImg3I,
-  featureImg4,
-  featureImg4I,
-  featureImg5,
-  featureImg5I,
-  map,
+  heroRing,
   ndic,
+  ng,
   ngMd,
   playstore,
+  revveM,
   revveP,
   teamImg1,
+  tl,
+  tr,
+  uk,
   ukMd,
+  us,
   usMd,
 } from "@app/assets";
 
@@ -38,213 +35,142 @@ const Page: NextPageWithLayout = () => {
 
       <View className="my-[8rem]">
         {/* Hero Section */}
-        <section className="max-container px-4 lg:px-10  min-h-screen overflow-y-hidden">
-          <div className="relative flex-1 pt-[6rem] lg:pt-[10rem] ">
-            <h1 className=" text-2xl md:text-3xl lg:text-3xl  text-dark-1 mb-4 lg:mb-8 text-center md:text-start">
-              <span className="text-primary">Send, Swap, Shop -</span>
-              <br />
-              Your Passport to Easy
-              <br />
-              Worldwide Play.
-            </h1>
-            <p className=" text-dark-2 text-center md:text-start my-6 lg:mb-8 ">
-              Perform cross-border transaction with ease on Revve.
-            </p>
-            <p className="text-center md:text-start my-6 lg:mb-8">
-              <Link href={"#"} className="inline-block">
-                <Image src={playstore} alt="Play store link" />
-              </Link>
-              <Link href={"#"} className="inline-block ml-2">
-                <Image src={appstore} alt="App store link" />
-              </Link>
-            </p>
-            <p className="text-dark-4 text-center md:text-start">
-              <span className="inline-block ">
-                Fully Licensed by the CBN
-                <Image className="inline-block ml-2" src={cbn} alt="CBN Logo" />
-              </span>
-              <span className="inline-block  md:ml-3">
-                Deposits insured by
-                <Image
-                  className="inline-block ml-2"
-                  src={ndic}
-                  alt="NDIC Logo"
-                />
-              </span>
-            </p>
+        <section className="max-container px-4 lg:px-10 min-h-screen overflow-y-hidden">
+          <div className="flex flex-col md:flex-row">
+            <div className="relative flex-1  pt-[6rem] lg:pt-[10rem] ">
+              <h1 className="mb-4 max-sm:text-[1.8rem] lg:mb-8 text-center md:text-start">
+                <span className="text-primary">Send, Swap, Shop -</span>
+                <br />
+                Your Passport to Easy
+                <br />
+                Worldwide Play.
+              </h1>
+              <p className="text-center md:text-start my-6 lg:mb-8 ">
+                Perform cross-border transaction with ease on Revve.
+              </p>
+              <p className="text-center md:text-start my-6 lg:mb-8">
+                <Link href={"#"} className="inline-block">
+                  <Image src={playstore} alt="Play store link" />
+                </Link>
+                <Link href={"#"} className="inline-block ml-2">
+                  <Image src={appstore} alt="App store link" />
+                </Link>
+              </p>
+              <p className="text-dark-3 text-center md:text-start">
+                <span className="inline-block ">
+                  Fully Licensed by the CBN
+                  <Image
+                    className="inline-block ml-2"
+                    src={cbn}
+                    alt="CBN Logo"
+                  />
+                </span>
+                <span className="inline-block  md:ml-3">
+                  Deposits insured by
+                  <Image
+                    className="inline-block ml-2"
+                    src={ndic}
+                    alt="NDIC Logo"
+                  />
+                </span>
+              </p>
+            </div>
+            <div
+              className="relative flex-1 hidden lg:block  animate-scaleIn opacity-0 text-xl my-2"
+              style={{ "--delay": 0.25 + "s" }}
+            >
+              <div className="relative w-full h-full">
+                <Image className="object-cover" src={heroRing} alt="Hero " />
+
+                <div className="sm:absolute left-[5%] top-[10%] h-full w-full">
+                  <Image
+                    className="object-cover lg:h-[100%] lg:w-[80%]"
+                    src={revveM}
+                    alt="Hero "
+                  />
+                </div>
+                {/* <div className="animate-spin-right"> */}
+                <div className="absolute animate-wiggle top-0 ">
+                  <Image src={tl} alt="Hero " />
+                </div>
+                <div className="absolute animate-wiggle  bottom-[20%] left-[5%]">
+                  <Image src={bl} alt="Hero " />
+                </div>
+                <div className="absolute top-[20%] left-[22%]">
+                  <Image src={us} alt="Hero " />
+                </div>
+                <div className="absolute animate-pulse bottom-0 left-[28%]">
+                  <Image src={ca} alt="Hero " />
+                </div>
+                {/*  */}
+                <div className="absolute animate-wiggle top-[10%] right-0">
+                  <Image src={tr} alt="Hero " />
+                </div>
+                <div className="absolute  animate-pulse top-[40%] right-[10%]">
+                  <Image src={ng} alt="Hero " />
+                </div>
+                <div className="absolute animate-wiggle b0ttom-[15%] right-[10%]">
+                  <Image src={br} alt="Hero " />
+                </div>
+                <div className="absolute bottom-[20%] right-0">
+                  <Image src={uk} alt="Hero " />
+                </div>
+                {/* </div> */}
+              </div>
+            </div>
           </div>
-          <div
-            className="flex-1 hidden lg:block animate-scaleIn opacity-0 text-xl my-2"
-            style={{ "--delay": 0.25 + "s" }}
-          ></div>
         </section>
         {/* Features Section */}
-        <section className="max-container px-4 lg:px-10  overflow-y-hidden mb-8">
+        <section className="max-container px-4 lg:px-10  overflow-y-hidden mb-[6rem]">
           <div className="text-center mb-6">
-            <p className="text-secondary uppercase bg-acceent">
-              our key features
+            <p className="text-secondary uppercase my-4">
+              <span className="bg-accent p-3">our key features</span>
             </p>
-            <h2 className="text-[2.75rem]">
+            <h2 className="">
               Empower Your Cross-Border <br /> Moves with Reeve
             </h2>
           </div>
-          {/* Feature 1 */}
-          <div className="flex flex-col lg:flex-row py-8">
-            <div className="flex-1">
-              <div className="flex justify-center">
-                <div className="relative">
-                  <Image src={featureImg1} alt="Features" />
-                  <Image
-                    src={featureImg1I}
-                    alt="Features"
-                    className="absolute top-[2.75rem] lg:left-[-8rem]"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="flex-1 pt-[5rem]">
-              <h3 className="text-2xl mb-2">
-                Send and Receive <br /> Money
-              </h3>
-              <p className="text-dark-5 lg:w-[70%] my-3 text-[20px]">
-                Unlock Currency Freedom: Swap foreign currencies for Naira in a
-                secure and trusted way! Your trusted partner for seamless and
-                secure currency exchanges in Nigeria
-              </p>
-              <Button label="Get Started" />
-            </div>
-          </div>
-          {/* Feature 2 */}
-          <div className="flex flex-col lg:flex-row py-8">
-            <div className="flex-1 pt-[5rem]">
-              <h3 className="text-2xl mb-2">Buy and Sell Currency</h3>
-              <p className="text-dark-5 lg:w-[70%] my-3 text-[20px]">
-                Unlock Currency Freedom: Swap foreign currencies for Naira in a
-                secure and trusted way! Your trusted partner for seamless and
-                secure currency exchanges in Nigeria
-              </p>
-              <Button label="Get Started" />
-            </div>
-            <div className="flex-1">
-              <div className="flex justify-center">
-                <div className="relative">
-                  <Image src={featureImg2} alt="Features" />
-                  <Image
-                    className="absolute top-[2.75rem] right-[-8rem]"
-                    src={featureImg2I}
-                    alt="Features"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* Feature 3 */}
-          <div className="flex flex-col lg:flex-row py-8">
-            <div className="flex-1">
-              <div className="flex justify-center">
-                <div className="relative">
-                  <Image src={featureImg3} alt="Features" />
-                  <Image
-                    src={featureImg3I}
-                    alt="Features"
-                    className="absolute top-[2.75rem] lg:left-[-8rem]"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="flex-1 pt-[5rem]">
-              <h3 className="text-2xl mb-2">Multi- Currency Wallets</h3>
-              <p className="text-dark-5 lg:w-[70%] my-3 text-[20px]">
-                Unlock Currency Freedom: Swap foreign currencies for Naira in a
-                secure and trusted way! Your trusted partner for seamless and
-                secure currency exchanges in Nigeria
-              </p>
-              <Button label="Get Started" />
-            </div>
-          </div>
-          {/* Feature 4 */}
-          <div className="flex flex-col lg:flex-row py-8">
-            <div className="flex-1 pt-[5rem]">
-              <h3 className="text-2xl mb-2">Pay Bills</h3>
-              <p className="text-dark-5 lg:w-[70%] my-3 text-[20px]">
-                Unlock Currency Freedom: Swap foreign currencies for Naira in a
-                secure and trusted way! Your trusted partner for seamless and
-                secure currency exchanges in Nigeria
-              </p>
-              <Button label="Get Started" />
-            </div>
-            <div className="flex-1">
-              <div className="flex justify-center">
-                <div className="relative">
-                  <Image src={featureImg4} alt="Features" />
-                  <Image
-                    src={featureImg4I}
-                    alt="Features"
-                    className="absolute top-[2.75rem] right-[-8rem]"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* Feature 5 */}
-          <div className="flex flex-col lg:flex-row py-8">
-            <div className="flex-1">
-              <div className="flex justify-center">
-                <div className="relative">
-                  <Image src={featureImg5} alt="Features" />
-                  <Image
-                    className="absolute top-[2.75rem] lg:left-[-8rem]"
-                    src={featureImg5I}
-                    alt="Features"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="flex-1 pt-[5rem]">
-              <h3 className="text-2xl mb-2">Shop Online</h3>
-              <p className="text-dark-5 lg:w-[70%] my-3 text-[20px]">
-                Unlock Currency Freedom: Swap foreign currencies for Naira in a
-                secure and trusted way! Your trusted partner for seamless and
-                secure currency exchanges in Nigeria
-              </p>
-              <Button label="Get Started" />
-            </div>
-          </div>
+          {/* Feature List */}
+          <Features />
         </section>
         {/* About Section */}
         <section className="overflow-y-hidden">
           <div className="px-4 lg:px-10 bg-[#3B1347] py-8 info-graph">
-            <h3 className="font-dm-sans text-white font-bold text-2xl text-center my-6">
+            <h4 className="font-dm-sans text-white font-bold text-xl lg:text-2xl text-center my-6">
               We currently operate in 4 Countries
-            </h3>
+            </h4>
             <div className="flex justify-evenly my-[4rem]">
-              <h4 className="text-white">
-                <Image className="inline-block" src={ngMd} alt="Nigeria Flag" />
-                <span className="inline-block ml-3">Nigeria</span>
-              </h4>
+              <h5 className="text-white">
+                <Image
+                  className="inline-block "
+                  src={ngMd}
+                  alt="Nigeria Flag"
+                />
+                <span className="inline-block ml-3 max-sm:hidden">Nigeria</span>
+              </h5>
 
-              <h4 className="text-white">
+              <h5 className="text-white">
                 <Image className="inline-block" src={ukMd} alt="Nigeria Flag" />
-                <span className="inline-block ml-3">United Kingdom</span>
-              </h4>
+                <span className="inline-block ml-3 max-sm:hidden">
+                  United Kingdom
+                </span>
+              </h5>
 
-              <h4 className="text-white">
+              <h5 className="text-white">
                 <Image className="inline-block" src={usMd} alt="Nigeria Flag" />
-                <span className="inline-block ml-3">U.S.A</span>
-              </h4>
+                <span className="inline-block ml-3 max-sm:hidden">U.S.A</span>
+              </h5>
 
-              <h4 className="text-white">
+              <h5 className="text-white">
                 <Image className="inline-block" src={caMd} alt="Nigeria Flag" />
-                <span className="inline-block ml-3">Canada</span>
-              </h4>
+                <span className="inline-block ml-3 max-sm:hidden">Canada</span>
+              </h5>
             </div>
           </div>
           <div className="max-container flex flex-col lg:flex-row px-4 lg:px-10  my-[4rem]">
             <div className="flex-1 lg:pt-[6rem] mb-16">
-              <h3 className="text-[2.874rem] font-semibold text-dark-7">
-                About Us
-              </h3>
-              <p className="text-dark-6 text-[1.125rem] lg:w-[70%] my-10">
+              <h2 className="">About Us</h2>
+              <p className="text-[1.125rem] lg:w-[70%] my-10">
                 A detailed wireframe kit made of comprehensive components to get
                 you started on you next website or landing pageproject. A
                 detailed wireframe kit made of comprehensive components to get
@@ -280,11 +206,11 @@ const Page: NextPageWithLayout = () => {
         {/* Testimonial Section */}
         <section className=" bg-primary  overflow-y-hidden">
           <div className="max-container px-4 lg:px-10 py-[6rem]">
-            <div className="text-center text-white my-4">
-              <h3 className="text-lg lg:text-[2.875rem] mb-8">
+            <div className="my-4">
+              <h2 className="text-center text-white mb-8">
                 What our ‘Revvers’ have to say
-              </h3>
-              <p className="my-8">
+              </h2>
+              <p className="text-center text-white my-8">
                 Great team produces great results. Join the Revve family.
               </p>
             </div>
@@ -296,9 +222,7 @@ const Page: NextPageWithLayout = () => {
         {/* Team Section */}
         <section className="max-container px-4 lg:px-10 py-[6rem] overflow-y-hidden">
           <div className="text-center">
-            <h3 className="text-lg lg:text-[2.875rem] mb-3">
-              Meet our Awesome Team
-            </h3>
+            <h2 className="mb-3">Meet our Awesome Team</h2>
             <p className="my-8">
               Here are few of our awesome Team Members who are making <br />
               waves and of course shipping out products fastly
@@ -312,11 +236,11 @@ const Page: NextPageWithLayout = () => {
         <section className="overflow-y-hidden">
           <div className="bg-primary ">
             <div className="max-container px-4 lg:px-[10rem] py-[6rem]">
-              <div className="text-white text-center">
-                <h3 className="text-lg lg:text-[3.5rem]">
+              <div className="">
+                <h2 className="text-center text-white">
                   Frequently Asked Questions
-                </h3>
-                <p className="my-8">
+                </h2>
+                <p className="text-center text-white my-8">
                   Here are some basic questions and answers <br />
                   to help you get started.
                 </p>
@@ -327,8 +251,8 @@ const Page: NextPageWithLayout = () => {
               </div>
             </div>
           </div>
-          <div className="max-container px-4 lg:px-[8rem] lg:py-[10rem]">
-            <div className="my-[4rem] lgmy-[8rem]">
+          <div className="max-container px-4 lg:px-[8rem] lg:py-[10rem] my-[6rem]">
+            <div className="">
               <CTA />
             </div>
           </div>
@@ -336,7 +260,7 @@ const Page: NextPageWithLayout = () => {
         {/* Contact Section */}
         <section className="max-container px-4 lg:px-10  overflow-y-hidden">
           <div className="text-center">
-            <h3 className="text-[2.875rem]">Contact Us</h3>
+            <h2 className="">Contact Us</h2>
             <p className="my-8">
               Have any question or feedback, feel free to reach out to us.
               <br /> We are always available to help.
@@ -351,21 +275,6 @@ const Page: NextPageWithLayout = () => {
   );
 };
 
-Page.getLayout = (page) => (
-  <Layout>
-    <Header links={menuLinks} isNav>
-      <Link className="bg-primary text-white rounded py-2 px-3" href={"#"}>
-        <span className="inline-block">Download Revve</span>
-        <Image
-          className="inline-block ml-2"
-          src={download}
-          alt="Download App"
-        />
-      </Link>
-    </Header>
-    {page}
-    <Footer />
-  </Layout>
-);
+Page.getLayout = BaseLayout;
 
 export default Page;

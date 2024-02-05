@@ -4,27 +4,29 @@ const { fontFamily } = require("tailwindcss/defaultTheme");
 
 const dark = {
   0: "#000",
-  1: "#232323",
-  2: "#1D1B20",
-  3: "#5C5C5C",
-  4: "#979797",
-  5: "#4C4D50",
+  1: "#1D1B20",
+  2: "#4C4D50",
+  3: "#979797",
+  4: "#232323",
+  5: "#5C5C5C",
   6: "#1D1D1D",
   7: "#1B1B1B",
 };
-export default {
+
+const config = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     fontSize: {
-      xs: ["12px", "16px"],
-      sm: ["14px", "20px"],
-      base: ["1rem", "1.25rem"],
+      xs: ["0.75rem", "1rem"],
+      sm: ["0.875rem", "1.25rem"],
+      base: ["1rem", "1.5rem"],
       lg: ["1.5rem", "1.8rem"],
-      xl: ["1.8rem", "2rem"],
-      "2xl": ["2.5rem", "3rem"],
-      "3xl": ["3.8rem", "4.75rem"],
+      xl: ["1.8rem", "2.4rem"],
+      xxl: ["2.5rem", "3rem"],
+      "2xl": ["2.875rem", "3.5rem"],
+      "3xl": ["3.5rem", "4.5rem"],
       "4xl": ["4.5rem", "5rem"],
-      "8xl": ["96px", "106px"],
+      "8xl": ["6rem", "6.5rem"],
     },
     extend: {
       fontFamily: {
@@ -49,21 +51,74 @@ export default {
       screens: {
         wide: "1440px",
       },
+      backgroundImage: {
+        "mockup-fg": "url('/mockup-fg.svg')",
+        "mockup-bg": "url('/mockup-bg.svg')",
+      },
     },
 
     animation: {
       "slideIn-left": "slideIn-left .6s ease-in-out forwards var(--delay, 0s)",
+      "slide-in-fwd-center":
+        "slide-in-fwd-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both var(--delay, 0s)",
+      pulse: "pulse 1.5s ease-in-out infinite both",
       "slideIn-top":
         "slideIn-top var(--duration, 0.3s) ease-in-out forwards var(--delay, 0s)",
       scaleIn: "scaleIn .8s ease-in-out forwards var(--delay, 0s)",
+      "slide-in-b":
+        "slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both",
       "shake-vertical":
         "shake-vertical 8s cubic-bezier(0.455, 0.030, 0.515, 0.955) 0.4s infinite both",
+      "spin-right": "spin-right 15s linear infinite",
       wiggle: "wiggle 1s ease-in-out infinite",
       "wobble-right": "wobble-right 1.8s  infinite both var(--delay, 0.3s)",
       "wobble-left": " wobble-left 1.8s  infinite both var(--delay, 0.3s)",
     },
 
     keyframes: {
+      pulse: {
+        from: {
+          transform: "scale(1)",
+          "transform-origin": "center center",
+          "animation-timing-function": "ease-out",
+        },
+        "10%": {
+          transform: "scale(0.91)",
+          "animation-timing-function": "ease-in",
+        },
+        "17%": {
+          transform: "scale(0.98)",
+          "animation-timing-function": "ease-out",
+        },
+        "33%": {
+          transform: "scale(0.87)",
+          "animation-timing-function": "ease-in",
+        },
+        "45%": {
+          transform: "scale(1)",
+          "animation-timing-function": "ease-out",
+        },
+      },
+      "slide-in-bottom": {
+        "0%": {
+          transform: "translateY(100%)",
+          opacity: 0,
+        },
+        "100%": {
+          transform: "translateY(0)",
+          opacity: 1,
+        },
+      },
+      "slide-in-fwd-center": {
+        "0%": {
+          transform: "translateZ(-100cgh)",
+          opacity: 0,
+        },
+        "100%": {
+          transform: "translateZ(0)",
+          opacity: 1,
+        },
+      },
       "slideIn-left": {
         "0%": { opacity: 0, transform: "translateX(-100%)" },
         "100%": { opacity: 1, transform: "translateX(0)" },
@@ -75,6 +130,9 @@ export default {
       scaleIn: {
         "0%": { opacity: 0.5, transform: "scale(0.5)" },
         "100%": { opacity: 1, transform: "scale(1)" },
+      },
+      "spin-right": {
+        "100%": { transform: "rotate(360deg)" },
       },
 
       wiggle: {
@@ -145,6 +203,8 @@ export default {
   },
   plugins: [],
 };
+
+export default config;
 
 // module.exports = {
 //   presets: [require("@vercel/examples-ui/tailwind")],

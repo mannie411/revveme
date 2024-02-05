@@ -1,22 +1,22 @@
-<svg width="748" height="757" viewBox="0 0 748 757" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M382.822 -7C593.519 -7 764.322 163.803 764.322 374.5C764.322 585.197 593.519 756 382.822 756C172.126 756 1.32227 585.197 1.32227 374.5C1.32227 163.803 172.126 -7 382.822 -7Z" stroke="url(#paint0_linear_495_29715)" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M382.823 53.7334C559.977 53.7334 703.589 197.345 703.589 374.5C703.589 551.654 559.977 695.266 382.823 695.266C205.669 695.266 62.0566 551.654 62.0566 374.5C62.0566 197.345 205.669 53.7334 382.823 53.7334Z" stroke="url(#paint1_linear_495_29715)" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M382.821 114.468C526.433 114.468 642.854 230.889 642.854 374.5C642.854 518.112 526.433 634.533 382.821 634.533C239.209 634.533 122.789 518.112 122.789 374.5C122.789 230.889 239.209 114.468 382.821 114.468Z" stroke="url(#paint2_linear_495_29715)" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M382.824 175.202C492.893 175.202 582.122 264.431 582.122 374.5C582.122 484.57 492.893 573.799 382.824 573.799C272.754 573.799 183.525 484.57 183.525 374.5C183.525 264.431 272.754 175.202 382.824 175.202Z" stroke="url(#paint3_linear_495_29715)" stroke-linecap="round" stroke-linejoin="round"/>
+<svg width="765" height="765" viewBox="0 0 765 765" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M382.822 1C593.519 1 764.322 171.803 764.322 382.5C764.322 593.197 593.519 764 382.822 764C172.126 764 1.32227 593.197 1.32227 382.5C1.32227 171.803 172.126 1 382.822 1Z" stroke="url(#paint0_linear_619_39202)" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M382.823 61.7334C559.977 61.7334 703.589 205.345 703.589 382.5C703.589 559.654 559.977 703.266 382.823 703.266C205.669 703.266 62.0566 559.654 62.0566 382.5C62.0566 205.345 205.669 61.7334 382.823 61.7334Z" stroke="url(#paint1_linear_619_39202)" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M382.821 122.468C526.433 122.468 642.854 238.889 642.854 382.5C642.854 526.112 526.433 642.533 382.821 642.533C239.209 642.533 122.789 526.112 122.789 382.5C122.789 238.889 239.209 122.468 382.821 122.468Z" stroke="url(#paint2_linear_619_39202)" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M382.824 183.202C492.893 183.202 582.122 272.431 582.122 382.5C582.122 492.57 492.893 581.799 382.824 581.799C272.754 581.799 183.525 492.57 183.525 382.5C183.525 272.431 272.754 183.202 382.824 183.202Z" stroke="url(#paint3_linear_619_39202)" stroke-linecap="round" stroke-linejoin="round"/>
 <defs>
-<linearGradient id="paint0_linear_495_29715" x1="382.822" y1="756" x2="382.822" y2="-7" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint0_linear_619_39202" x1="382.822" y1="764" x2="382.822" y2="1" gradientUnits="userSpaceOnUse">
 <stop stop-color="#4A3AFF" stop-opacity="0.13"/>
 <stop offset="1" stop-color="#4A3AFF" stop-opacity="0"/>
 </linearGradient>
-<linearGradient id="paint1_linear_495_29715" x1="382.823" y1="695.266" x2="382.823" y2="53.7334" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint1_linear_619_39202" x1="382.823" y1="703.266" x2="382.823" y2="61.7334" gradientUnits="userSpaceOnUse">
 <stop stop-color="#4A3AFF" stop-opacity="0.13"/>
 <stop offset="1" stop-color="#4A3AFF" stop-opacity="0"/>
 </linearGradient>
-<linearGradient id="paint2_linear_495_29715" x1="382.821" y1="634.533" x2="382.821" y2="114.468" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint2_linear_619_39202" x1="382.821" y1="642.533" x2="382.821" y2="122.468" gradientUnits="userSpaceOnUse">
 <stop stop-color="#4A3AFF" stop-opacity="0.13"/>
 <stop offset="1" stop-color="#4A3AFF" stop-opacity="0"/>
 </linearGradient>
-<linearGradient id="paint3_linear_495_29715" x1="382.824" y1="573.799" x2="382.824" y2="175.202" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint3_linear_619_39202" x1="382.824" y1="581.799" x2="382.824" y2="183.202" gradientUnits="userSpaceOnUse">
 <stop stop-color="#4A3AFF" stop-opacity="0.13"/>
 <stop offset="1" stop-color="#4A3AFF" stop-opacity="0"/>
 </linearGradient>

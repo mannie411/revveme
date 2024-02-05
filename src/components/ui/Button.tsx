@@ -23,9 +23,7 @@ const Button: FC<ButtonProps> = ({
     <Fragment>
       {variant === "default" && (
         <button
-          className={`flex justify-center items-center gap-1 text-white bg-primary p-3 w-100 rounded-[.3rem] ${
-            className && className
-          }`}
+          className={`btn ${className && className}`}
           onClick={onClick}
           type={type}
         >
@@ -34,7 +32,7 @@ const Button: FC<ButtonProps> = ({
         </button>
       )}
       {variant === "icon" && (
-        <button>
+        <button className="btn">
           <span>{label}</span>
           <span>{icon}</span>
         </button>

@@ -14,23 +14,25 @@ import location from "../../public/Location.svg";
 
 const Contact = () => {
   return (
-    <div className="flex flex-col lg:flex-row space-x-2 lg:px-14 ">
+    <div className="flex flex-col md:flex-row lg:space-x-2 lg:px-14 ">
       <div className="my-3">
-        <div className="text-white bg-purple-gradient p-[3rem] rounded">
-          <h4 className="text-[26px]">Contact Information</h4>
-          <p className="my-8">
+        <div className=" bg-purple-gradient px-[2rem] py-[3rem] lg:p-[3rem] rounded">
+          <h3 className="text-white max-sm:text-lg text-xl">
+            Contact Information
+          </h3>
+          <p className="text-white my-8">
             Fill up the form and we’ll get back to you in few hours.
           </p>
           <div className="flex flex-col gap-8">
-            <p>
+            <p className="text-white">
               <Image className="inline-block" src={call} alt="Call" />
               <span className="inline-block ml-3">+29000000000</span>
             </p>
-            <p>
+            <p className="text-white">
               <Image className="inline-block" src={mail} alt="Call" />
               <span className="inline-block ml-3">hello@mail.com</span>
             </p>
-            <p>
+            <p className="text-white">
               <Image className="inline-block" src={location} alt="Call" />
               <span className="ml-3">33, New york City. United States.</span>
             </p>
@@ -50,7 +52,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <div className="flex-1 p-6">
+      <div className="flex-1 lg:p-6  p-4">
         <ContactForm />
       </div>
     </div>

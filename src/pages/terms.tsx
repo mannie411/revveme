@@ -1,5 +1,5 @@
 import React from "react";
-import { Head, Layout, View } from "@app/components/ui";
+import { Head, Header, Layout, View } from "@app/components/ui";
 import { getMarkdownData } from "@app/utils";
 import { DataProp, NextPageWithLayout } from "@app/types";
 import { Markdown } from "@app/components";
@@ -10,6 +10,7 @@ const Page = ({ data }: { data: DataProp }) => {
   return (
     <Layout>
       <Head title="Terms of use" />
+      <Header links={subLinks} isNav={true} />
       <View>
         <section className="max-container px-4 py-16 lg:px-10 min-h-screen">
           <div className="my-16 px-4 lg:px-[14rem]">
