@@ -11,7 +11,7 @@ const Page = ({ data }: { data: DataProp }) => {
   return (
     <Layout>
       <Head title="Privacy Policy" />
-      <Header links={subLinks} isNav={true} />
+      <Header links={subLinks} variants="default" />
 
       <View>
         <section className="max-container px-4 py-16 lg:px-10 min-h-screen">

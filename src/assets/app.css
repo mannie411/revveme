@@ -170,7 +170,9 @@ h5 {
 
   .ft-img {
     position: relative;
+
     z-index: 5;
+
     @apply before:content-[''] before:w-full before:h-[45%] before:object-cover 
     before:absolute before:bottom-0  before:bg-mockup-bg before:bg-contain 
     before:bg-bottom before:bg-no-repeat before:z-0 after:content-[''] 
@@ -178,6 +180,11 @@ h5 {
     after:absolute after:bottom-0 lg:after:left-[10%]
     after:bg-mockup-fg after:bg-contain after:bg-no-repeat 
     after:bg-bottom after:z-10;
+  }
+
+  .perspective {
+    perspective: 500px;
+    perspective-origin: calc(50% + 120px) 50%;
   }
 }
 

@@ -14,7 +14,7 @@ const Page: NextPageWithLayout = () => {
       <Head title="Contact Us" />
 
       <View className="mt-24">
-        <section className="max-container px-4 lg:px-10  overflow-y-hidden">
+        <section className="max-container px-4 lg:px-[4rem]  overflow-y-hidden">
           <div className="text-center lg:mt-[3rem]">
             <h2 className="">Contact Us</h2>
             <p className="my-8">

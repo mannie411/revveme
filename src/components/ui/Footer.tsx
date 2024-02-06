@@ -10,8 +10,8 @@ interface FooterProps extends ComponentProps {}
 
 const Footer: FC<FooterProps> = ({ children }) => {
   return (
-    <footer className="bg-primary px-4 lg:px-10  overflow-y-hidden">
-      <div className="flex flex-col lg:flex-row  max-container my-[4rem] lg:my-[6rem] ">
+    <footer className="bg-primary  overflow-y-hidden">
+      <div className="flex flex-col lg:flex-row  px-4 lg:px-[4rem] max-container my-[4rem] lg:my-[6rem] ">
         <div className="text-white w-full lg:w-[40%]">
           <div>
             <Image src={logoWhite} alt="Logo" />
@@ -48,7 +48,7 @@ const Footer: FC<FooterProps> = ({ children }) => {
           </nav>
         </div>
       </div>
-      <div className="max-container ">
+      <div className="max-container  px-4 lg:px-[4rem] ">
         <div className="my-10 h-[1px] w-full bg-white opacity-40" />
         <div className="flex flex-col lg:flex-row justify-between items-center">
           <nav>
@@ -62,7 +62,7 @@ const Footer: FC<FooterProps> = ({ children }) => {
           </nav>
 
           <div>
-            <SocialLinks />
+            <SocialLinks color="white" />
           </div>
         </div>
       </div>

@@ -7,7 +7,7 @@ import {
   TwitterIcon,
 } from "./icons";
 
-const SocialLinks = () => {
+const SocialLinks = ({ color = "black" }) => {
   return (
     <div
       className="my-8 animate-slideIn-left opacity-0 "
@@ -17,10 +17,10 @@ const SocialLinks = () => {
         {socialLinks.map(({ path, icon }, idx) => (
           <li key={icon}>
             <a href={`${path}`} target="_blank" rel="noopener noreferrer">
-              {icon === "linkedin" && <LinkedInIcon />}
-              {icon === "facebook" && <FacebookIcon />}
-              {icon === "twitter" && <TwitterIcon />}
-              {icon === "instagram" && <InstagramIcon />}
+              {icon === "linkedin" && <LinkedInIcon color={color} />}
+              {icon === "facebook" && <FacebookIcon color={color} />}
+              {icon === "twitter" && <TwitterIcon color={color} />}
+              {icon === "instagram" && <InstagramIcon color={color} />}
             </a>
           </li>
         ))}

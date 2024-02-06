@@ -19,7 +19,7 @@ const Page: NextPageWithLayout = () => {
       <Head title="About Us" />
       <View className="mt-24">
         {/* About Us */}
-        <section className="max-container px-6 my-[6rem]">
+        <section className="max-container px-4 lg:px-[4rem] my-[6rem]">
           <div className="w-full pt-[4rem]">
             <h1 className="">About Revve</h1>
             <p className="lg:w-[60%] my-8">
@@ -39,7 +39,7 @@ const Page: NextPageWithLayout = () => {
           </div>
         </section>
         {/* Mission */}
-        <section className="max-container px-6">
+        <section className="max-container px-4 lg:px-[4rem]">
           <div className="text-center">
             <h2 className="">Our Mission</h2>
             <p className="my-8 lg:w-[50%] mx-auto ">
@@ -69,7 +69,7 @@ const Page: NextPageWithLayout = () => {
         </section>
         {/* Values */}
         <section className="bg-primary py-[6rem] lg:py-[8rem] values">
-          <div className="max-container flex flex-col lg:flex-row  px-6">
+          <div className="max-container flex flex-col lg:flex-row  px-4 lg:px-[4rem]">
             <div className="flex-1">
               <h2 className="text-white">Our Core Values</h2>
               <p className="my-8 text-white lg:w-1/2 ">
@@ -99,7 +99,7 @@ const Page: NextPageWithLayout = () => {
           </div>
         </section>
         {/* Team Section */}
-        <section className="max-container px-4 lg:px-10 py-[6rem] overflow-y-hidden">
+        <section className="max-container px-4 lg:px-[4rem] py-[6rem] overflow-y-hidden">
           <div className="text-center">
             <h2 className="mb-3">Meet our Awesome Team</h2>
             <p className="mb-3">
@@ -118,7 +118,7 @@ const Page: NextPageWithLayout = () => {
         </section>
 
         {/* Contact Section */}
-        <section className="max-container px-4 lg:px-10  overflow-y-hidden">
+        <section className="max-container px-4 lg:px-[4rem]  overflow-y-hidden">
           <div className="text-center">
             <h2 className="">Contact Us</h2>
             <p className="my-8">

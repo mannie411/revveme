@@ -17,9 +17,9 @@ const Page = () => {
       <Layout>
         <Header />
         <View>
-          <section className="flex max-container px-4 lg:px-10 min-h-screen overflow-y-hidden">
+          <section className="flex max-container px-4 max-sm:items-center lg:px-[4rem] min-h-screen overflow-y-hidden">
             <div className="relative flex-1 pt-[8rem] lg:pt-[16rem] ">
-              <h1 className="text-3xl lg:text-4xl  text-dark-1 mb-4 lg:mb-8 text-center md:text-start">
+              <h1 className="mb-4 lg:mb-8 text-center md:text-start">
                 <span
                   className="animate-slideIn-left opacity-0 inline-block"
                   style={{ "--delay": 0.25 + "s" }}
@@ -35,17 +35,18 @@ const Page = () => {
                 </span>
               </h1>
               <p
-                className="animate-slideIn-left opacity-0  text-dark-2 text-center md:text-start my-6 lg:mb-8 "
+                className="animate-slideIn-left opacity-0 text-center md:text-start my-6 lg:mb-8 "
                 style={{ "--delay": 0.45 + "s" }}
               >
                 This page you are looking for isn’t avaliable. Visit the
                 homepage or go back.
               </p>
               <div
-                className="animate-slideIn-left opacity-0  text-dark-2 text-center md:text-start my-6 lg:mb-8 "
+                className="animate-slideIn-left opacity-0  text-center md:text-start my-6 lg:mb-8 "
                 style={{ "--delay": 0.5 + "s" }}
               >
                 <Button
+                  className="max-sm:mx-auto"
                   label="Back to home page"
                   icon={<RigthArrowIcon />}
                   onClick={() => router.push("/")}

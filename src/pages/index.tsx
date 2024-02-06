@@ -35,7 +35,7 @@ const Page: NextPageWithLayout = () => {
 
       <View className="my-[8rem]">
         {/* Hero Section */}
-        <section className="max-container px-4 lg:px-10 min-h-screen overflow-y-hidden">
+        <section className="max-container px-4 lg:px-[4rem] min-h-screen overflow-y-hidden">
           <div className="flex flex-col md:flex-row">
             <div className="relative flex-1  pt-[6rem] lg:pt-[10rem] ">
               <h1 className="mb-4 max-sm:text-[1.8rem] lg:mb-8 text-center md:text-start">
@@ -121,7 +121,7 @@ const Page: NextPageWithLayout = () => {
           </div>
         </section>
         {/* Features Section */}
-        <section className="max-container px-4 lg:px-10  overflow-y-hidden mb-[6rem]">
+        <section className="max-container px-4 lg:px-[4rem]  overflow-y-hidden mb-[6rem]">
           <div className="text-center mb-6">
             <p className="text-secondary uppercase my-4">
               <span className="bg-accent p-3">our key features</span>
@@ -135,7 +135,7 @@ const Page: NextPageWithLayout = () => {
         </section>
         {/* About Section */}
         <section className="overflow-y-hidden">
-          <div className="px-4 lg:px-10 bg-[#3B1347] py-8 info-graph">
+          <div className="px-4 lg:px-[4rem] bg-[#3B1347] py-8 info-graph">
             <h4 className="font-dm-sans text-white font-bold text-xl lg:text-2xl text-center my-6">
               We currently operate in 4 Countries
             </h4>
@@ -167,7 +167,7 @@ const Page: NextPageWithLayout = () => {
               </h5>
             </div>
           </div>
-          <div className="max-container flex flex-col lg:flex-row px-4 lg:px-10  my-[4rem]">
+          <div className="max-container flex flex-col lg:flex-row px-4 lg:px-[4rem]  my-[4rem]">
             <div className="flex-1 lg:pt-[6rem] mb-16">
               <h2 className="">About Us</h2>
               <p className="text-[1.125rem] lg:w-[70%] my-10">
@@ -197,15 +197,15 @@ const Page: NextPageWithLayout = () => {
               </div>
             </div>
             <div className="flex-1">
-              <div>
-                <Image src={aboutImg1} alt="Family Image" />
+              <div className="">
+                <Image className="mx-auto" src={aboutImg1} alt="Family Image" />
               </div>
             </div>
           </div>
         </section>
         {/* Testimonial Section */}
         <section className=" bg-primary  overflow-y-hidden">
-          <div className="max-container px-4 lg:px-10 py-[6rem]">
+          <div className="max-container px-4 lg:px-[4rem] py-[6rem]">
             <div className="my-4">
               <h2 className="text-center text-white mb-8">
                 What our ‘Revvers’ have to say
@@ -220,7 +220,7 @@ const Page: NextPageWithLayout = () => {
           </div>
         </section>
         {/* Team Section */}
-        <section className="max-container px-4 lg:px-10 py-[6rem] overflow-y-hidden">
+        <section className="max-container px-4 lg:px-[4rem] py-[6rem] overflow-y-hidden">
           <div className="text-center">
             <h2 className="mb-3">Meet our Awesome Team</h2>
             <p className="my-8">
@@ -258,7 +258,7 @@ const Page: NextPageWithLayout = () => {
           </div>
         </section>
         {/* Contact Section */}
-        <section className="max-container px-4 lg:px-10  overflow-y-hidden">
+        <section className="max-container px-4 lg:px-[4rem]  overflow-y-hidden">
           <div className="text-center">
             <h2 className="">Contact Us</h2>
             <p className="my-8">

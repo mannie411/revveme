@@ -17,7 +17,7 @@ import { subLinks } from "@app/utils/constants";
 const Page: NextPageWithLayout = () => {
   return (
     <View>
-      <section className="flex max-container px-4 lg:px-10 min-h-screen overflow-y-hidden">
+      <section className="flex max-container px-4 lg:px-[4rem] min-h-screen overflow-y-hidden">
         <div className="relative flex-1 pt-[8rem] lg:pt-[16rem] ">
           <h5
             className="animate-slideIn-left opacity-0 text-lg text-primary flex  justify-center md:justify-start items-center mb-4 lg:mb-8"
@@ -66,7 +66,7 @@ Page.getLayout = (page) => (
   <Fragment>
     <Head title="Coming - Soon" />
     <Layout>
-      <Header links={subLinks} />
+      <Header links={subLinks} variants="default" />
       {page}
     </Layout>
   </Fragment>

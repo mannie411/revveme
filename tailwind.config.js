@@ -111,7 +111,7 @@ const config = {
       },
       "slide-in-fwd-center": {
         "0%": {
-          transform: "translateZ(-100cgh)",
+          transform: "translateZ(-1000px)",
           opacity: 0,
         },
         "100%": {

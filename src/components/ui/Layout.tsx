@@ -15,10 +15,14 @@ const Layout: FC<LayoutProp> = ({ children }) => {
 
 export const BaseLayout = (page: any) => (
   <Layout>
-    <Header links={menuLinks} isNav>
+    <Header links={menuLinks} variants="default">
       <Link className="bg-primary text-white rounded py-2 px-3" href={"#"}>
-        <span className="inline-block">Get Revve </span>
-        <Image className="inline-block ml-2" src={download} alt="Get revve" />
+        <span className="inline-block">Download Revve </span>
+        <Image
+          className="inline-block ml-2"
+          src={download}
+          alt="Download revve"
+        />
       </Link>
     </Header>
     {page}
