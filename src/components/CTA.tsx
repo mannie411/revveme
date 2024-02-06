@@ -11,7 +11,7 @@ import {
 
 const CTA = () => {
   return (
-    <div className="bg-purple-gradient rounded cta">
+    <div className="cta">
       <div className="flex flex-col lg:flex-row px-4  lg:px-[4rem] py-[6rem] ">
         <div className="flex-1  my-auto">
           <h3 className=" text-white">

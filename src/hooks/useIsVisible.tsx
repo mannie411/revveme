@@ -6,7 +6,7 @@ export const useIsVisible = (ref: any) => {
   useEffect(() => {
     const options = {
       root: null, // default, use viewport
-      rootMargin: "100% 0px 0px 0px",
+      rootMargin: "50% 0px 50% 0px",
       threshold: 0.8, // half of item height
     };
     const observer = new IntersectionObserver(([entry]) => {

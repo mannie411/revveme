@@ -107,18 +107,20 @@ h5 {
 
   .card.transparent {
     position: relative;
-    background: /*linear-gradient(
+    /* background: linear-gradient(
       180deg,
       rgba(255, 255, 255, 0.3) 0%,
       rgba(255, 255, 255, 0) 100%
-    ), */ linear-gradient(
+    ),  linear-gradient(
       0deg,
       rgba(255, 255, 255, 0.04),
       rgba(255, 255, 255, 0.04)
-    );
+    );*/
+
+    @apply bg-border-t bg-contain bg-no-repeat;
   }
 
-  .card.transparent::before {
+  /* .card.transparent::before {
     content: "";
     border: 1px solid;
     border-radius: inherit;
@@ -136,7 +138,7 @@ h5 {
     height: 100%;
 
     z-index: -1;
-  }
+  } */
 
   .link {
     @apply text-dark-5 text-sm;
@@ -155,7 +157,7 @@ h5 {
   }
 
   .slider .slides {
-    @apply scrollbar-hide flex snap-x snap-mandatory
+    @apply scrollbar-hide flex snap-x snap-mandatory lg:justify-center
      overflow-hidden overflow-x-auto gap-3
      scroll-smooth before:w-[45vw] 
      before:shrink-0 after:w-[45vw] 
@@ -170,21 +172,27 @@ h5 {
 
   .ft-img {
     position: relative;
-
     z-index: 5;
 
     @apply before:content-[''] before:w-full before:h-[45%] before:object-cover 
     before:absolute before:bottom-0  before:bg-mockup-bg before:bg-contain 
-    before:bg-bottom before:bg-no-repeat before:z-0 after:content-[''] 
+    before:bg-bottom before:bg-no-repeat before:z-0  after:content-[''] 
     after:w-full lg:after:w-[80%] after:h-full 
     after:absolute after:bottom-0 lg:after:left-[10%]
     after:bg-mockup-fg after:bg-contain after:bg-no-repeat 
     after:bg-bottom after:z-10;
   }
 
-  .perspective {
-    perspective: 500px;
-    perspective-origin: calc(50% + 120px) 50%;
+  .about {
+    @apply lg:bg-about-bg1 bg-no-repeat bg-right-top;
+  }
+
+  .values {
+    @apply bg-about-bg2 bg-no-repeat bg-cover;
+  }
+
+  .cta {
+    @apply bg-cta-gradient bg-contain bg-no-repeat bg-center-right rounded-md;
   }
 }
 
@@ -220,6 +228,21 @@ h5 {
   .info-text {
     @apply font-montserrat text-slate-gray text-lg leading-7;
   }
+
+  .bg-purple-gradient {
+    background: linear-gradient(
+      108.92deg,
+      #4f0072 2.67%,
+      rgba(98, 33, 126, 0.722379) 109.65%,
+      rgba(118, 68, 138, 0.428386) 118.38%,
+      rgba(118, 68, 138, 0) 135.3%
+    );
+  }
+
+  .perspective {
+    perspective: 500px;
+    perspective-origin: calc(50% + 120px) 50%;
+  }
 }
 
 .markdown > ol {
@@ -246,16 +269,6 @@ h5 {
   margin-bottom: 1.25rem;
 }
 
-.bg-purple-gradient {
-  background: linear-gradient(
-    108.92deg,
-    #4f0072 2.67%,
-    rgba(98, 33, 126, 0.722379) 109.65%,
-    rgba(118, 68, 138, 0.428386) 118.38%,
-    rgba(118, 68, 138, 0) 135.3%
-  );
-}
-
 .cta,
 .info-graph,
 .values {
@@ -264,9 +277,7 @@ h5 {
 }
 
 .cta::after,
-.info-graph::after,
-.values::before,
-.values::after {
+.info-graph::after {
   content: "";
   position: absolute;
   height: 100%;
@@ -283,13 +294,7 @@ h5 {
   background-repeat: no-repeat;
 }
 
-.cta::after {
-  background: url("../../public/Oval@2x.png");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-
+/* 
 .values::before {
   background: url("../../public/about-oval.svg");
   background-size: contain;
@@ -303,14 +308,14 @@ h5 {
   right: 0;
   top: auto;
   left: auto;
-}
+} */
 
-.values::after {
+/* .values::after {
   background: url("../../public/about-oval-1.svg");
   background-size: contain;
   background-position: 0% 100%;
   background-repeat: no-repeat;
-}
+} */
 
 .scrollbar-hide::-webkit-scrollbar {
   display: none; /* for Chrome, Safari and Opera */

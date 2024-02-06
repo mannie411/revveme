@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import Image from "next/image";
 
 import { Footer, Head, Header, BaseLayout, View } from "@app/components/ui";
-import { CTA, Contact } from "@app/components";
+import { CTA, Contact, FeatureCountries } from "@app/components";
 
 import teamImg1 from "../../public/team-1.png";
 import aboutImg2 from "../../public/about-2.png";
@@ -19,28 +19,34 @@ const Page: NextPageWithLayout = () => {
       <Head title="About Us" />
       <View className="mt-24">
         {/* About Us */}
-        <section className="max-container px-4 lg:px-[4rem] my-[6rem]">
-          <div className="w-full pt-[4rem]">
-            <h1 className="">About Revve</h1>
-            <p className="lg:w-[60%] my-8">
-              At Revve, we transcend borders to redefine the way the world
-              engages in cross-border transactions. We are more than a platform;
-              we are architects of financial connectivity, committed to making
-              global transactions as seamless as local ones. Our journey is one
-              of innovation, collaboration, and empowerment.
-            </p>
-          </div>
-          <div className="my-6">
-            <div className="flex flex-col lg:flex-row gap-6">
-              <Image className="lg:w-[60%]" src={aboutImg2} alt="Family" />
+        <section className="about  my-[6rem]">
+          <div className="max-container px-4 lg:px-[4rem]">
+            <div className="w-full pt-[4rem]">
+              <h1 className="">About Revve</h1>
+              <p className="lg:w-[60%] my-8">
+                At Revve, we transcend borders to redefine the way the world
+                engages in cross-border transactions. We are more than a
+                platform; we are architects of financial connectivity, committed
+                to making global transactions as seamless as local ones. Our
+                journey is one of innovation, collaboration, and empowerment.
+              </p>
+            </div>
+            <div className="my-6">
+              <div className="flex flex-col lg:flex-row gap-6">
+                <Image className="lg:w-[60%]" src={aboutImg2} alt="Family" />
 
-              <Image className="lg:w-[40%]" src={aboutImg3} alt="Happy User" />
+                <Image
+                  className="lg:w-[40%]"
+                  src={aboutImg3}
+                  alt="Happy User"
+                />
+              </div>
             </div>
           </div>
         </section>
         {/* Mission */}
         <section className="max-container px-4 lg:px-[4rem]">
-          <div className="text-center">
+          <div className="text-center lg:my-[8rem]">
             <h2 className="">Our Mission</h2>
             <p className="my-8 lg:w-[50%] mx-auto ">
               At Revve our mission is to empower individuals and businesses by
@@ -107,16 +113,17 @@ const Page: NextPageWithLayout = () => {
               waves and of course shipping out products fastly
             </p>
           </div>
-
           <div className="my-[6rem]">
             <Image src={teamImg1} alt="Team" />
           </div>
-
-          <div className="">
+        </section>
+        {/* Feature Countries */}
+        <section className="overflow-y-hidden">
+          <FeatureCountries />
+          <div className="max-container px-4 lg:px-[4rem] py-[6rem]">
             <CTA />
           </div>
         </section>
-
         {/* Contact Section */}
         <section className="max-container px-4 lg:px-[4rem]  overflow-y-hidden">
           <div className="text-center">

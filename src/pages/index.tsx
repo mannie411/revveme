@@ -2,7 +2,14 @@ import React, { Fragment } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { BaseLayout, Head, View } from "@app/components/ui";
-import { CTA, Contact, FAQ, Features, Testimonial } from "@app/components";
+import {
+  CTA,
+  Contact,
+  FAQ,
+  FeatureCountries,
+  Features,
+  Testimonial,
+} from "@app/components";
 import { NextPageWithLayout } from "@app/types";
 import {
   aboutImg1,
@@ -135,39 +142,8 @@ const Page: NextPageWithLayout = () => {
         </section>
         {/* About Section */}
         <section className="overflow-y-hidden">
-          <div className="px-4 lg:px-[4rem] bg-[#3B1347] py-8 info-graph">
-            <h4 className="font-dm-sans text-white font-bold text-xl lg:text-2xl text-center my-6">
-              We currently operate in 4 Countries
-            </h4>
-            <div className="flex justify-evenly my-[4rem]">
-              <h5 className="text-white">
-                <Image
-                  className="inline-block "
-                  src={ngMd}
-                  alt="Nigeria Flag"
-                />
-                <span className="inline-block ml-3 max-sm:hidden">Nigeria</span>
-              </h5>
-
-              <h5 className="text-white">
-                <Image className="inline-block" src={ukMd} alt="Nigeria Flag" />
-                <span className="inline-block ml-3 max-sm:hidden">
-                  United Kingdom
-                </span>
-              </h5>
-
-              <h5 className="text-white">
-                <Image className="inline-block" src={usMd} alt="Nigeria Flag" />
-                <span className="inline-block ml-3 max-sm:hidden">U.S.A</span>
-              </h5>
-
-              <h5 className="text-white">
-                <Image className="inline-block" src={caMd} alt="Nigeria Flag" />
-                <span className="inline-block ml-3 max-sm:hidden">Canada</span>
-              </h5>
-            </div>
-          </div>
-          <div className="max-container flex flex-col lg:flex-row px-4 lg:px-[4rem]  my-[4rem]">
+          <FeatureCountries />
+          <div className="max-container flex flex-col lg:flex-row px-4 lg:px-[4rem]  my-[6rem]">
             <div className="flex-1 lg:pt-[6rem] mb-16">
               <h2 className="">About Us</h2>
               <p className="text-[1.125rem] lg:w-[70%] my-10">
@@ -251,10 +227,8 @@ const Page: NextPageWithLayout = () => {
               </div>
             </div>
           </div>
-          <div className="max-container px-4 lg:px-[8rem] lg:py-[10rem] my-[6rem]">
-            <div className="">
-              <CTA />
-            </div>
+          <div className="max-container px-4 lg:px-[4rem] my-4 lg:my-[8rem]">
+            <CTA />
           </div>
         </section>
         {/* Contact Section */}

@@ -1,7 +1,7 @@
 import Contact from "./Contact";
 import CTA from "./CTA";
 import FAQ from "./FAQ";
-import Features from "./Features";
+import Features, { FeatureCountries } from "./Features";
 import Markdown from "./Markdown";
 import NoSSR from "./NoSSR";
 import SocialLinks from "./SocialLinks";
@@ -12,6 +12,7 @@ export {
   CTA,
   FAQ,
   Features,
+  FeatureCountries,
   Markdown,
   NoSSR,
   SocialLinks,

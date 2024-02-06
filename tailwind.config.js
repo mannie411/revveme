@@ -29,6 +29,9 @@ const config = {
       "8xl": ["6rem", "6.5rem"],
     },
     extend: {
+      width: {
+        f: "calc(100% - 6rem)",
+      },
       fontFamily: {
         "dm-sans": ["var(--font-dm-sans)", ...fontFamily.sans],
         inter: ["var(--font-inter)", ...fontFamily.sans],
@@ -52,8 +55,17 @@ const config = {
         wide: "1440px",
       },
       backgroundImage: {
+        "about-bg1": "url('/about-bg1.svg')",
+        "about-bg2": "url('/about-bg2.svg')",
+        "border-t": "url('/bg-border.svg')",
         "mockup-fg": "url('/mockup-fg.svg')",
         "mockup-bg": "url('/mockup-bg.svg')",
+        "cta-gradient":
+          "url('/Oval.svg'), linear-gradient(108.92deg,#4f0072 2.67%,rgba(98, 33, 126, 0.722379) 109.65%,rgba(118, 68, 138, 0.428386) 118.38%,rgba(118, 68, 138, 0) 135.3%) ",
+      },
+      backgroundPosition: {
+        "right-top": "right top 100px",
+        "center-right": "right center",
       },
     },
 

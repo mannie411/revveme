@@ -38,11 +38,11 @@ import featureImg3 from "../../public/mockup-f3.png";
 import featureImg4 from "../../public/mockup-f4.png";
 import featureImg5 from "../../public/mockup-f5.png";
 
-import featureImg1I from "../../public/mockup-i-f1.png";
-import featureImg2I from "../../public/mockup-i-f2.png";
-import featureImg3I from "../../public/mockup-i-f3.png";
-import featureImg4I from "../../public/mockup-i-f4.png";
-import featureImg5I from "../../public/mockup-i-f5.png";
+import featureImg1I from "../../public/mockup-i-f1.svg";
+import featureImg2I from "../../public/mockup-i-f2.svg";
+import featureImg3I from "../../public/mockup-i-f3.svg";
+import featureImg4I from "../../public/mockup-i-f4.svg";
+import featureImg5I from "../../public/mockup-i-f5.svg";
 
 import bl from "../../public/bl-small.png";
 import br from "../../public/br-small.png";
