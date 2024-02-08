@@ -13,7 +13,7 @@ const Footer: FC<FooterProps> = ({ children }) => {
     <footer className="bg-primary  overflow-y-hidden">
       <div className="flex flex-col lg:flex-row  px-4 lg:px-[4rem] max-container my-[4rem] lg:my-[6rem] ">
         <div className="text-white w-full lg:w-[40%]">
-          <div>
+          <div className="w-1/2">
             <Image src={logoWhite} alt="Logo" />
           </div>
           <p className="text-white my-8">

@@ -1,17 +1,14 @@
 import React, { Fragment } from "react";
+import Link from "next/link";
 import Image from "next/image";
 
-import { Footer, Head, Header, BaseLayout, View } from "@app/components/ui";
+import { Head, BaseLayout, View } from "@app/components/ui";
 import { CTA, Contact, FeatureCountries } from "@app/components";
 
-import teamImg1 from "../../public/team-1.png";
-import aboutImg2 from "../../public/about-2.png";
-import aboutImg3 from "../../public/about-3.png";
-import aboutImg4 from "../../public/about-4.png";
-import { menuLinks, values } from "@app/utils/constants";
-import { download } from "@app/assets";
-import Link from "next/link";
 import { NextPageWithLayout } from "@app/types";
+
+import { values } from "@app/utils/constants";
+import { aboutImg2, aboutImg3, aboutImg4, teamImg1 } from "@app/assets";
 
 const Page: NextPageWithLayout = () => {
   return (
@@ -22,8 +19,8 @@ const Page: NextPageWithLayout = () => {
         <section className="about  my-[6rem]">
           <div className="max-container px-4 lg:px-[4rem]">
             <div className="w-full pt-[4rem]">
-              <h1 className="">About Revve</h1>
-              <p className="lg:w-[60%] my-8">
+              <h1 className="text-center md:text-start">About Revve</h1>
+              <p className="text-center md:text-start lg:w-[60%] my-8">
                 At Revve, we transcend borders to redefine the way the world
                 engages in cross-border transactions. We are more than a
                 platform; we are architects of financial connectivity, committed
@@ -60,8 +57,8 @@ const Page: NextPageWithLayout = () => {
               <Image src={aboutImg4} alt="User story" />
             </div>
             <div className="flex-1 mt-[6rem]">
-              <h2 className="">Our Story</h2>
-              <p className="my-8 lg:w-[80%]">
+              <h2 className="text-center md:text-start">Our Story</h2>
+              <p className="text-center md:text-start my-8 lg:w-[80%]">
                 Established in [Year], [Your Company Name] was born out of a
                 passion for innovation and a vision for a world where
                 cross-border transactions are not just transactions but moments
@@ -77,8 +74,10 @@ const Page: NextPageWithLayout = () => {
         <section className="bg-primary py-[6rem] lg:py-[8rem] values">
           <div className="max-container flex flex-col lg:flex-row  px-4 lg:px-[4rem]">
             <div className="flex-1">
-              <h2 className="text-white">Our Core Values</h2>
-              <p className="my-8 text-white lg:w-1/2 ">
+              <h2 className="text-white text-center md:text-start">
+                Our Core Values
+              </h2>
+              <p className="my-8 text-white text-center md:text-start lg:w-1/2 ">
                 Established in [Year], [Your Company Name] was born out of a
                 passion for innovation and a vision for a world where
                 cross-border.

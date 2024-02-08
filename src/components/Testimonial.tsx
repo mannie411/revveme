@@ -59,11 +59,21 @@ const Testimonial = () => {
         </div>
       </div>
 
-      <div className="flex space-x-1 justify-center my-16">
-        {}
-        <span className="bg-white rounded-full h-2 w-2"></span>
-        <span className="bg-white opacity-60 rounded-full h-2 w-2"></span>
-        <span className="bg-white opacity-60 rounded-full h-2 w-2"></span>
+      <div className="my-16">
+        <div className="md:hidden flex justify-center gap-6">
+          <button id="prev" onClick={gotoPrevSlide}>
+            <Image src={roundleft} alt="Left Arrow" />
+          </button>
+          <button id="next" onClick={gotoNextSlide}>
+            <Image src={roundRight} alt="Right Arrow" />
+          </button>
+        </div>
+
+        <div className="slider-indicator ">
+          <span className="bg-white rounded-full h-2 w-2"></span>
+          <span className="bg-white opacity-60 rounded-full h-2 w-2"></span>
+          <span className="bg-white opacity-60 rounded-full h-2 w-2"></span>
+        </div>
       </div>
     </div>
   );

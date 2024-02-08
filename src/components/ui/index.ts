@@ -4,7 +4,7 @@ import Head from "./Head";
 import Header from "./Header";
 import Input from "./Input";
 import Layout from "./Layout";
-import Logo from "./Logo";
+import Logo from "../icons/Logo";
 import View from "./View";
 
 export * from "./Layout";

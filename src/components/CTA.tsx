@@ -15,16 +15,16 @@ const CTA = () => {
     <div className="cta">
       <div className="flex flex-col lg:flex-row px-4  lg:px-[4rem] py-[6rem] ">
         <div className="flex-1  my-auto">
-          <h3 className=" text-white">
+          <h3 className="text-center md:text-start text-white">
             Download the Revve
             <br />
             Mobile App
           </h3>
-          <p className=" text-white my-8 md:w-[60%]">
+          <p className="text-center md:text-start text-white my-8 md:w-[60%]">
             Making payment on purchase of your favorite products just got better
             and more awesome. Enjoy the amazing experience!!!
           </p>
-          <div>
+          <div className="text-center md:text-start">
             <Link className="inline-block " href="#">
               <Image src={playstoreLight} alt="Play store Link" />
             </Link>

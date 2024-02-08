@@ -31,11 +31,11 @@ const Page: NextPageWithLayout = () => {
     <Fragment>
       <Head title="Home" />
 
-      <View className="my-[8rem]">
+      <View className="my-[6rem]">
         {/* Hero Section */}
         <section className="max-container px-4 lg:px-[4rem] min-h-screen overflow-y-hidden">
           <div className="flex flex-col md:flex-row">
-            <div className="relative flex-1  pt-[6rem] lg:pt-[10rem] ">
+            <div className="relative flex-1  pt-[2rem] md:pt-[6rem] lg:pt-[10rem] ">
               <h1 className="mb-4 max-sm:text-[1.8rem] lg:mb-8 text-center md:text-start">
                 <span className="text-primary">Send, Swap, Shop -</span>
                 <br />

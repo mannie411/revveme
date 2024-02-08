@@ -91,7 +91,7 @@ const Features = () => {
           </div>
         </div>
         <div className="flex-1  ">
-          <div className="pt-[5rem] lg:pl-[4rem]">
+          <div className="my-4 md:pt-[5rem] lg:pl-[4rem]">
             <h3 className="mb-2">
               Send and Receive <br /> Money
             </h3>
@@ -107,7 +107,7 @@ const Features = () => {
       {/* Feature 2 */}
       <div ref={ref2} className="flex flex-col lg:flex-row py-8 ">
         <div className="flex-1 ">
-          <div className="pt-[5rem] ">
+          <div className="my-4 md:pt-[5rem] md:pl-[4rem] ">
             <h3 className="mb-2">Buy and Sell Currency</h3>
             <p className="text-dark-5 lg:w-[70%] my-4 ">
               Unlock Currency Freedom: Swap foreign currencies for Naira in a
@@ -167,7 +167,7 @@ const Features = () => {
           </div>
         </div>
         <div className="flex-1  ">
-          <div className="pt-[5rem] lg:pl-[4rem]">
+          <div className="my-4 md:pt-[5rem] lg:pl-[4rem]">
             <h3 className=" mb-2">Multi- Currency Wallets</h3>
             <p className="text-dark-5 lg:w-[70%] my-4 ">
               Unlock Currency Freedom: Swap foreign currencies for Naira in a
@@ -181,7 +181,7 @@ const Features = () => {
       {/* Feature 4 */}
       <div ref={ref4} className="flex flex-col lg:flex-row py-8 ">
         <div className="flex-1 ">
-          <div className="pt-[5rem]">
+          <div className="my-4 md:pt-[5rem] md:pl-[4rem]">
             <h3 className=" mb-2">Pay Bills</h3>
             <p className="text-dark-5 lg:w-[70%] my-4 ">
               Unlock Currency Freedom: Swap foreign currencies for Naira in a
@@ -240,7 +240,7 @@ const Features = () => {
           </div>
         </div>
         <div className="flex-1">
-          <div className=" pt-[5rem] lg:pl-[4rem]">
+          <div className="my-4 md:pt-[5rem] lg:pl-[4rem]">
             <h3 className=" mb-2">Shop Online</h3>
             <p className="text-dark-5 lg:w-[70%] my-4 ">
               Unlock Currency Freedom: Swap foreign currencies for Naira in a

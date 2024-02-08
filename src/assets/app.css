@@ -46,11 +46,11 @@ h5 {
   }
 
   h2 {
-    @apply text-xl md:text-2xl font-semibold text-dark-1;
+    @apply text-lg md:text-2xl font-semibold text-dark-1;
   }
 
   h3 {
-    @apply text-lg md:text-xxl font-bold text-dark-1;
+    @apply text-x md:text-xxl font-bold text-dark-1;
   }
 
   h4 {
@@ -117,7 +117,7 @@ h5 {
       rgba(255, 255, 255, 0.04)
     );*/
 
-    @apply bg-border-t bg-contain bg-no-repeat;
+    @apply bg-border-t bg-cover bg-no-repeat;
   }
 
   /* .card.transparent::before {
@@ -154,6 +154,10 @@ h5 {
 
   .slider .slider-btn {
     @apply hidden md:block mx-2;
+  }
+
+  .slider .slider-indicator {
+    @apply max-sm:hidden flex  justify-center  space-x-1;
   }
 
   .slider .slides {

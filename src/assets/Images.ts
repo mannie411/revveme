@@ -56,7 +56,14 @@ import uk from "../../public/uk-small.png";
 import ca from "../../public/ca-small.png";
 import ng from "../../public/ng-small.png";
 
+import aboutImg2 from "../../public/about-2.png";
+import aboutImg3 from "../../public/about-3.png";
+import aboutImg4 from "../../public/about-4.png";
+
 export {
+  aboutImg2,
+  aboutImg3,
+  aboutImg4,
   revveHero,
   mockupCTA,
   revveM,

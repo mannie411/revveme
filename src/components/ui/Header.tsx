@@ -41,9 +41,9 @@ const Header: FC<HeaderProps> = ({ links, variants = "empty", children }) => {
       {variants === "default" && (
         <Fragment>
           {/* Desktop */}
-          <div className=" relative max-container flex items-center justify-between w-full h-16  px-4 lg:px-[4rem] py-[4rem] z-[100] ">
-            <div>
-              <Link href={"/"}>
+          <div className=" relative max-container flex items-center justify-between w-full h-16  px-4 py-8 lg:px-[4rem] md:py-[3rem] z-[100] ">
+            <div className="w-[25%] md:w-[10%] ">
+              <Link href={"/"} className="w-full h-full">
                 <Logo />
               </Link>
             </div>
@@ -99,7 +99,7 @@ const Header: FC<HeaderProps> = ({ links, variants = "empty", children }) => {
           `}
             >
               <nav className="w-full">
-                <ul className="flex flex-col gap-5 padding-x padding-y">
+                <ul className="flex flex-col gap-5 padding-x pt-4 padding-b">
                   {links?.map(({ path, label }, idx) => (
                     <li key={label + idx} className={`link `}>
                       <Link

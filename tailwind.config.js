@@ -20,6 +20,7 @@ const config = {
       xs: ["0.75rem", "1rem"],
       sm: ["0.875rem", "1.25rem"],
       base: ["1rem", "1.5rem"],
+      x: ["1.25rem", "1.75rem"],
       lg: ["1.5rem", "1.8rem"],
       xl: ["1.8rem", "2.4rem"],
       xxl: ["2.5rem", "3rem"],
