@@ -31,6 +31,7 @@ import teamImg1 from "../../public/team-1.png";
 
 import mockupImg1 from "../../public/mockup-1.png";
 import mockupImg2 from "../../public/mockup-2.png";
+import mockupCTA from "../../public/mockup-cta.png";
 
 import featureImg1 from "../../public/mockup-f1.png";
 import featureImg2 from "../../public/mockup-f2.png";
@@ -43,6 +44,7 @@ import featureImg2I from "../../public/mockup-i-f2.svg";
 import featureImg3I from "../../public/mockup-i-f3.svg";
 import featureImg4I from "../../public/mockup-i-f4.svg";
 import featureImg5I from "../../public/mockup-i-f5.svg";
+import revveHero from "../../public/revve-hero.svg";
 
 import bl from "../../public/bl-small.png";
 import br from "../../public/br-small.png";
@@ -55,6 +57,8 @@ import ca from "../../public/ca-small.png";
 import ng from "../../public/ng-small.png";
 
 export {
+  revveHero,
+  mockupCTA,
   revveM,
   heroRing,
   mockupBg,

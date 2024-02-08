@@ -158,27 +158,27 @@ h5 {
 
   .slider .slides {
     @apply scrollbar-hide flex snap-x snap-mandatory lg:justify-center
-     overflow-hidden overflow-x-auto gap-3
+     overflow-hidden overflow-x-auto gap-4
      scroll-smooth before:w-[45vw] 
      before:shrink-0 after:w-[45vw] 
      after:shrink-0 md:before:w-0 md:after:w-0;
   }
 
   .slides .slide {
-    @apply shrink-0 snap-always flex-none 
-    grow-0 snap-center overflow-hidden  w-[20rem]
-    md:max-w-[24rem] bg-white shadow-xl rounded-md px-[4rem] py-[6rem];
+    @apply shrink-0 snap-always flex-none
+    grow-0 snap-center overflow-hidden  max-sm:w-[20rem]
+    md:max-w-[22rem] bg-white shadow-xl rounded-md px-[4rem] py-[6rem];
   }
 
   .ft-img {
     position: relative;
     z-index: 5;
 
-    @apply before:content-[''] before:w-full before:h-[45%] before:object-cover 
+    @apply before:content-[''] before:w-full before:h-full  before:object-cover 
     before:absolute before:bottom-0  before:bg-mockup-bg before:bg-contain 
     before:bg-bottom before:bg-no-repeat before:z-0  after:content-[''] 
-    after:w-full lg:after:w-[80%] after:h-full 
-    after:absolute after:bottom-0 lg:after:left-[10%]
+    after:w-full  after:h-full 
+    after:absolute after:bottom-0 
     after:bg-mockup-fg after:bg-contain after:bg-no-repeat 
     after:bg-bottom after:z-10;
   }
@@ -192,7 +192,7 @@ h5 {
   }
 
   .cta {
-    @apply bg-cta-gradient bg-contain bg-no-repeat bg-center-right rounded-md;
+    @apply bg-cta-gradient max-sm:bg-cover max-sm:bg-center bg-contain bg-no-repeat bg-center-right rounded-md;
   }
 }
 

@@ -3,7 +3,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev ",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -18,7 +18,7 @@
   "devDependencies": {
     "@types/node": "^17.0.45",
     "@types/react": "^18.0.28",
-    "autoprefixer": "^10.4.14",
+    "autoprefixer": "^10.4.17",
     "eslint": "^8.36.0",
     "eslint-config-next": "canary",
     "postcss": "^8.4.21",

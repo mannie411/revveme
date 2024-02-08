@@ -10,3 +10,6 @@ useCase:
 - Edge Config
 
 css: Tailwind
+
+
+The terms and policy pages utilize a markdown file. Makes changes to their corresponding files.

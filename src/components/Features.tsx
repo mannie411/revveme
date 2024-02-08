@@ -69,23 +69,23 @@ const Features = () => {
       {/* Feature 1 */}
       <div ref={ref1} className="flex flex-col lg:flex-row py-8 ">
         <div className="flex-1 overflow-y-hidden">
-          <div className="ft-img">
-            <div className="relative perspective mx-auto z-[5] py-1">
+          <div className="ft-img md:max-w-[80%] mx-auto">
+            <div className="relative perspective z-[5] py-1">
               <Image
-                className={`${
-                  isVisible1 ? "visible animate-slide-in-b " : "invisible"
-                } mx-auto object-contain aspect-square`}
                 src={featureImg1}
                 alt="Features"
+                className={`${
+                  isVisible1 ? "visible animate-slide-in-b " : "invisible"
+                } mx-auto max-sm:w-[80%]`}
               />
               <Image
                 src={featureImg1I}
                 alt="Features"
-                className={`absolute ${
+                className={`${
                   isVisible1
                     ? "visible animate-slide-in-fwd-center"
                     : "invisible"
-                } object-contain top-[2.75rem] lg:left-0 max-sm:w-[65%]`}
+                } absolute object-contain top-[2.75rem] left-0 md:-left-8 max-sm:w-[50%]`}
               />
             </div>
           </div>
@@ -118,23 +118,23 @@ const Features = () => {
           </div>
         </div>
         <div className="flex-1 max-sm:order-first overflow-y-hidden">
-          <div className="ft-img ">
-            <div className="relative perspective  z-[5] py-1">
+          <div className="ft-img md:max-w-[80%] mx-auto">
+            <div className="relative perspective z-[5] py-1">
               <Image
                 className={`${
                   isVisible2 ? "visible animate-slide-in-b " : "invisible"
-                } mx-auto object-contain aspect-square`}
+                } mx-auto max-sm:w-[80%]`}
                 src={featureImg2}
                 alt="Features"
               />
               <Image
+                src={featureImg2I}
+                alt="Features"
                 className={`${
                   isVisible2
                     ? "visible animate-slide-in-fwd-center"
                     : "invisible"
-                } absolute object-contain top-[2.75rem] right-0 max-sm:w-[65%] `}
-                src={featureImg2I}
-                alt="Features"
+                } absolute object-contain top-[2.75rem] right-0 md:-right-8 max-sm:w-[50%]`}
               />
             </div>
           </div>
@@ -143,24 +143,26 @@ const Features = () => {
       {/* Feature 3 */}
       <div ref={ref3} className="flex flex-col lg:flex-row py-8 ">
         <div className="flex-1 overflow-y-hidden">
-          <div className="ft-img">
-            <div className="relative perspective z-[5] py-1">
-              <Image
-                className={`${
-                  isVisible3 ? "visible animate-slide-in-b " : "invisible"
-                } mx-auto  object-contain aspect-square`}
-                src={featureImg3}
-                alt="Features"
-              />
-              <Image
-                src={featureImg3I}
-                alt="Features"
-                className={`${
-                  isVisible3
-                    ? "visible animate-slide-in-fwd-center"
-                    : "invisible"
-                } absolute  object-contain top-[2.75rem] left-0 max-sm:w-[65%]`}
-              />
+          <div className="flex-1  overflow-y-hidden">
+            <div className="ft-img md:max-w-[80%] mx-auto">
+              <div className="relative perspective z-[5] py-1">
+                <Image
+                  src={featureImg3}
+                  alt="Features"
+                  className={`${
+                    isVisible3 ? "visible animate-slide-in-b " : "invisible"
+                  } mx-auto max-sm:w-[80%]`}
+                />
+                <Image
+                  src={featureImg3I}
+                  alt="Features"
+                  className={`${
+                    isVisible3
+                      ? "visible animate-slide-in-fwd-center"
+                      : "invisible"
+                  } absolute object-contain top-[2.75rem] left-0 md:-left-8 max-sm:w-[50%]`}
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -191,12 +193,12 @@ const Features = () => {
         </div>
 
         <div className="flex-1 max-sm:order-first overflow-y-hidden">
-          <div className="ft-img">
+          <div className="ft-img md:max-w-[80%] mx-auto">
             <div className="relative perspective z-[5] py-1">
               <Image
                 className={`${
                   isVisible4 ? "visible animate-slide-in-b " : "invisible"
-                } mx-auto  object-contain aspect-square`}
+                } mx-auto max-sm:w-[80%]`}
                 src={featureImg4}
                 alt="Features"
               />
@@ -207,7 +209,7 @@ const Features = () => {
                   isVisible4
                     ? "visible animate-slide-in-fwd-center"
                     : "invisible"
-                } absolute object-contain top-[2.75rem] right-0 max-sm:w-[65%]`}
+                } absolute object-contain top-[2.75rem] right-0 md:-right-8 max-sm:w-[50%]`}
               />
             </div>
           </div>
@@ -216,14 +218,14 @@ const Features = () => {
       {/* Feature 5 */}
       <div ref={ref5} className="flex flex-col lg:flex-row py-8 ">
         <div className="flex-1  overflow-y-hidden">
-          <div className="ft-img">
+          <div className="ft-img md:max-w-[80%] mx-auto">
             <div className="relative perspective z-[5] py-1">
               <Image
                 src={featureImg5}
                 alt="Features"
                 className={`${
                   isVisible5 ? "visible animate-slide-in-b " : "invisible"
-                } mx-auto  object-contain aspect-square`}
+                } mx-auto max-sm:w-[80%]`}
               />
               <Image
                 src={featureImg5I}
@@ -232,7 +234,7 @@ const Features = () => {
                   isVisible5
                     ? "visible animate-slide-in-fwd-center"
                     : "invisible"
-                } absolute object-contain top-[2.75rem] left-0 max-sm:w-[65%]`}
+                } absolute object-contain top-[2.75rem] left-0 md:-left-8 max-sm:w-[50%]`}
               />
             </div>
           </div>

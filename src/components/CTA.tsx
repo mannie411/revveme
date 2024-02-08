@@ -4,6 +4,7 @@ import Link from "next/link";
 import {
   appstoreLight,
   bgOval,
+  mockupCTA,
   mockupImg1,
   mockupImg2,
   playstoreLight,
@@ -19,7 +20,7 @@ const CTA = () => {
             <br />
             Mobile App
           </h3>
-          <p className=" text-white my-8">
+          <p className=" text-white my-8 md:w-[60%]">
             Making payment on purchase of your favorite products just got better
             and more awesome. Enjoy the amazing experience!!!
           </p>
@@ -33,8 +34,9 @@ const CTA = () => {
           </div>
         </div>
         <div className="flex-1">
-          <div className="relative w-full mt-8 ">
-            <Image
+          <div className="relative w-[80%] mt-8  mx-auto ">
+            <Image src={mockupCTA} alt="Download Revve" />
+            {/* <Image
               className="relative left-[10%] inline-block max-sm:w-[45%] z-10 "
               src={mockupImg1}
               alt="Phone Image 1"
@@ -43,7 +45,7 @@ const CTA = () => {
               className="relative top-[15%] inline-block max-sm:w-[50%] "
               src={mockupImg2}
               alt="Phone Image 2"
-            />
+            /> */}
           </div>
         </div>
       </div>

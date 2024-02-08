@@ -74,20 +74,28 @@ const config = {
       "slide-in-fwd-center":
         "slide-in-fwd-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both var(--delay, 0s)",
       pulse: "pulse 1.5s ease-in-out infinite both",
+      ping: "ping 1s cubic-bezier(0, 0, 0.2, 1) infinite",
       "slideIn-top":
         "slideIn-top var(--duration, 0.3s) ease-in-out forwards var(--delay, 0s)",
       scaleIn: "scaleIn .8s ease-in-out forwards var(--delay, 0s)",
       "slide-in-b":
         "slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both",
       "shake-vertical":
-        "shake-vertical 8s cubic-bezier(0.455, 0.030, 0.515, 0.955) 0.4s infinite both",
+        "shake-vertical var(--duration, 8s)  cubic-bezier(0.455, 0.030, 0.515, 0.955) 0.4s infinite both",
       "spin-right": "spin-right 15s linear infinite",
-      wiggle: "wiggle 1s ease-in-out infinite",
+      wiggle:
+        "wiggle var(--duration, 1s) ease-in-out infinite var(--delay, 0.3s)",
       "wobble-right": "wobble-right 1.8s  infinite both var(--delay, 0.3s)",
       "wobble-left": " wobble-left 1.8s  infinite both var(--delay, 0.3s)",
     },
 
     keyframes: {
+      ping: {
+        "75%, 100%": {
+          transform: "scale(2)",
+          opacity: 0,
+        },
+      },
       pulse: {
         from: {
           transform: "scale(1)",

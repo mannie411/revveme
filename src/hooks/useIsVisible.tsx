@@ -13,7 +13,9 @@ export const useIsVisible = (ref: any) => {
       setIntersecting(entry.isIntersecting);
     }, options);
 
-    observer.observe(ref.current);
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
     return () => {
       observer.disconnect();
     };

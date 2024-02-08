@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { BaseLayout, Head, View } from "@app/components/ui";
@@ -8,34 +8,25 @@ import {
   FAQ,
   FeatureCountries,
   Features,
+  HeroImage,
   Testimonial,
 } from "@app/components";
 import { NextPageWithLayout } from "@app/types";
 import {
   aboutImg1,
   appstore,
-  bl,
-  br,
-  ca,
-  caMd,
   cbn,
-  heroRing,
   ndic,
-  ng,
-  ngMd,
   playstore,
   revveM,
   revveP,
   teamImg1,
-  tl,
-  tr,
-  uk,
-  ukMd,
-  us,
-  usMd,
 } from "@app/assets";
+import { useIsVisible } from "@app/hooks";
 
 const Page: NextPageWithLayout = () => {
+  const ref1 = useRef<HTMLDivElement>(null);
+  const isVisible = useIsVisible(ref1);
   return (
     <Fragment>
       <Head title="Home" />
@@ -83,46 +74,20 @@ const Page: NextPageWithLayout = () => {
               </p>
             </div>
             <div
-              className="relative flex-1 hidden lg:block  animate-scaleIn opacity-0 text-xl my-2"
-              style={{ "--delay": 0.25 + "s" }}
+              ref={ref1}
+              className={`relative flex-1 
+              text-xl my-2 ${
+                isVisible ? "animate-scaleIn visible" : "invisible opacity-0"
+              }
+              `}
+              // style={{ "--delay": 0.25 + "s" }}
             >
-              <div className="relative w-full h-full">
-                <Image className="object-cover" src={heroRing} alt="Hero " />
+              <div className="relative w-full h-full max-sm:my-[3rem]">
+                <HeroImage />
 
-                <div className="sm:absolute left-[5%] top-[10%] h-full w-full">
-                  <Image
-                    className="object-cover lg:h-[100%] lg:w-[80%]"
-                    src={revveM}
-                    alt="Hero "
-                  />
+                <div className="absolute left-0  top-0  w-[80%] ">
+                  <Image className="object-cover" src={revveM} alt="Hero " />
                 </div>
-                {/* <div className="animate-spin-right"> */}
-                <div className="absolute animate-wiggle top-0 ">
-                  <Image src={tl} alt="Hero " />
-                </div>
-                <div className="absolute animate-wiggle  bottom-[20%] left-[5%]">
-                  <Image src={bl} alt="Hero " />
-                </div>
-                <div className="absolute top-[20%] left-[22%]">
-                  <Image src={us} alt="Hero " />
-                </div>
-                <div className="absolute animate-pulse bottom-0 left-[28%]">
-                  <Image src={ca} alt="Hero " />
-                </div>
-                {/*  */}
-                <div className="absolute animate-wiggle top-[10%] right-0">
-                  <Image src={tr} alt="Hero " />
-                </div>
-                <div className="absolute  animate-pulse top-[40%] right-[10%]">
-                  <Image src={ng} alt="Hero " />
-                </div>
-                <div className="absolute animate-wiggle b0ttom-[15%] right-[10%]">
-                  <Image src={br} alt="Hero " />
-                </div>
-                <div className="absolute bottom-[20%] right-0">
-                  <Image src={uk} alt="Hero " />
-                </div>
-                {/* </div> */}
               </div>
             </div>
           </div>
@@ -227,7 +192,7 @@ const Page: NextPageWithLayout = () => {
               </div>
             </div>
           </div>
-          <div className="max-container px-4 lg:px-[4rem] my-4 lg:my-[8rem]">
+          <div className="max-container px-4 lg:px-[4rem] my-[6rem] lg:my-[8rem]">
             <CTA />
           </div>
         </section>
