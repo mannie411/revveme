@@ -53,11 +53,16 @@ const Page: NextPageWithLayout = () => {
             </p>
           </div>
           <div className="flex flex-col lg:flex-row my-[6rem]">
+            <h2 className="text-center md:text-start hidden max-sm:block my-12">
+              Our Story
+            </h2>
             <div className="flex-1">
               <Image src={aboutImg4} alt="User story" />
             </div>
-            <div className="flex-1 mt-[6rem]">
-              <h2 className="text-center md:text-start">Our Story</h2>
+            <div className="flex-1  md:mt-[6rem]">
+              <h2 className="text-center md:text-start hidden md:block">
+                Our Story
+              </h2>
               <p className="text-center md:text-start my-8 lg:w-[80%]">
                 Established in [Year], [Your Company Name] was born out of a
                 passion for innovation and a vision for a world where
@@ -86,7 +91,10 @@ const Page: NextPageWithLayout = () => {
             <div className="flex-1 lg:w-[60%]">
               <div className="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                 {values.map(({ imgUrl, title, content }, idx) => (
-                  <div key={idx} className="card transparent sm:col-span-3">
+                  <div
+                    key={idx}
+                    className="card transparent sm:col-span-3 min-h-[15rem]"
+                  >
                     <div className="mb-3">
                       <Image
                         src={`${imgUrl}`}
@@ -107,8 +115,9 @@ const Page: NextPageWithLayout = () => {
         <section className="max-container px-4 lg:px-[4rem] py-[6rem] overflow-y-hidden">
           <div className="text-center">
             <h2 className="mb-3">Meet our Awesome Team</h2>
-            <p className="mb-3">
-              Here are few of our awesome Team Members who are making <br />
+            <p className="mb-3 max-sm:w-[80%] mx-auto">
+              Here are few of our awesome Team Members who are making
+              <br className="max-sm:hidden " />
               waves and of course shipping out products fastly
             </p>
           </div>
@@ -127,9 +136,9 @@ const Page: NextPageWithLayout = () => {
         <section className="max-container px-4 lg:px-[4rem]  overflow-y-hidden">
           <div className="text-center">
             <h2 className="">Contact Us</h2>
-            <p className="my-8">
+            <p className="my-8 max-sm:w-[80%] mx-auto">
               Have any question or feedback, feel free to reach out to us.
-              <br /> We are always available to help.
+              <br className="max-sm:hidden " /> We are always available to help.
             </p>
           </div>
           <div className="my-[6rem]">

@@ -1,3 +1,4 @@
 import DetectOutsideClick from "./withDetectClick";
+import ReactPortal from "./withReactPortal";
 
-export { DetectOutsideClick };
+export { DetectOutsideClick, ReactPortal };

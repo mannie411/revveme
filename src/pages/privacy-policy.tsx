@@ -3,7 +3,7 @@ import React from "react";
 import { DataProp } from "@app/types";
 import { Head, Header, Layout, View } from "@app/components/ui";
 import { subLinks } from "@app/utils/constants";
-import { getMarkdownData } from "@app/utils";
+import getMarkdownData from "@app/utils/getMarkdown";
 import { Markdown } from "@app/components";
 
 const Page = ({ data }: { data: DataProp }) => {

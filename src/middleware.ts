@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-// import { get } from "@vercel/edge-config";
 
 export const config = {
   matcher: [
@@ -17,16 +16,11 @@ export const config = {
 const paths = ["/coming-soon", "/maintenance", "/privacy-policy", "/terms"];
 
 export async function middleware(req: NextRequest) {
-  if (!process.env.EDGE_CONFIG) {
-    req.nextUrl.pathname = `/edge-error`;
-    return NextResponse.rewrite(req.nextUrl);
-  }
-
-  return;
   try {
     // Check whether the maintenance page should be shown
     // const isInMaintenanceMode = await get<boolean>("isInMaintenanceMode");
-    const mode = process.env.MODE;
+    // const mode = process.env.MODE;
+    const mode: string = "isLive";
 
     // If is in maintenance mode, point the url pathname to the maintenance page
     if (mode === "isMaintenance") {

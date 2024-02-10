@@ -18,6 +18,13 @@ const WithDetectClick: FC<WithDetectClickProps> = ({
   });
 
   const onHandleClickEvt = (evt: any) => {
+    evt.stopPropagation();
+
+    if (evt.target.dataset.toggle === "true") {
+      onClickOutside(evt);
+      return;
+    }
+
     if (wrapperRef.current && !wrapperRef.current.contains(evt.target)) {
       onClickOutside(evt);
       return;

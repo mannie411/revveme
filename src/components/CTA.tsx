@@ -1,14 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import {
-  appstoreLight,
-  bgOval,
-  mockupCTA,
-  mockupImg1,
-  mockupImg2,
-  playstoreLight,
-} from "@app/assets";
+import { appstoreLight, mockupCTA, playstoreLight } from "@app/assets";
 
 const CTA = () => {
   return (

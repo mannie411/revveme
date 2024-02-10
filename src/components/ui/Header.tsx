@@ -121,7 +121,7 @@ const Header: FC<HeaderProps> = ({ links, variants = "empty", children }) => {
       {variants === "empty" && (
         <Fragment>
           <div className=" relative max-container flex items-center justify-between w-full h-16  px-4 lg:px-[4rem]  py-[4rem] z-[100]">
-            <div>
+            <div className="w-[25%] md:w-[10%] ">
               <Link className="logo" href={"/"}>
                 <Logo />
               </Link>

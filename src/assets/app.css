@@ -42,27 +42,23 @@ h5 {
 
 @layer base {
   h1 {
-    @apply text-xxl md:text-3xl  text-dark-1 font-bold;
+    @apply text-xl md:text-xxl lg:text-3xl  text-dark-1 font-bold;
   }
 
   h2 {
-    @apply text-lg md:text-2xl font-semibold text-dark-1;
+    @apply text-xx md:text-xl lg:text-2xl font-semibold text-dark-1;
   }
 
   h3 {
-    @apply text-x md:text-xxl font-bold text-dark-1;
+    @apply text-lg md:text-xx lg:text-xxl font-bold text-dark-1;
   }
 
   h4 {
-    @apply text-base font-semibold;
-  }
-
-  h5 {
-    @apply text-base font-normal;
+    @apply text-base md:text-lg lg:text-xl  font-semibold;
   }
 
   p {
-    @apply text-base text-dark-2 font-normal;
+    @apply text-sm md:text-base text-dark-2 font-normal;
   }
 }
 
@@ -196,7 +192,7 @@ h5 {
   }
 
   .cta {
-    @apply bg-cta-gradient max-sm:bg-cover max-sm:bg-center bg-contain bg-no-repeat bg-center-right rounded-md;
+    @apply bg-cta-gradient2 md:bg-cta-gradient  max-sm:bg-bottom bg-contain bg-no-repeat md:bg-center-right rounded-md;
   }
 }
 

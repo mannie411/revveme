@@ -3,7 +3,11 @@ import { ComponentProps } from "@app/types";
 
 const View: FC<ComponentProps> = ({ className, children }) => {
   return (
-    <main className={`relative ${className ? className : ""}`}>{children}</main>
+    <main
+      className={`relative snap-mandatory snap-y ${className ? className : ""}`}
+    >
+      {children}
+    </main>
   );
 };
 

@@ -74,7 +74,7 @@ const Page = () => {
                     </div>
                     <div
                       className="animate-shake-vertical"
-                      style={{ "--duration": 1 + "s" }}
+                      style={{ "--duration": 8 + "s" }}
                     >
                       <Image src={img404_2} alt="Number 0" />
                     </div>

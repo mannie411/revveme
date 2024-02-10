@@ -17,9 +17,7 @@ const Contact = () => {
     <div className="flex flex-col md:flex-row lg:space-x-2 lg:px-14 ">
       <div className="my-3">
         <div className=" bg-purple-gradient px-[2rem] py-[3rem] lg:p-[3rem] rounded">
-          <h3 className="text-white max-sm:text-lg text-xl">
-            Contact Information
-          </h3>
+          <h4 className="text-white">Contact Information</h4>
           <p className="text-white my-8">
             Fill up the form and we’ll get back to you in few hours.
           </p>

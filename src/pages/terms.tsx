@@ -1,6 +1,6 @@
 import React from "react";
 import { Head, Header, Layout, View } from "@app/components/ui";
-import { getMarkdownData } from "@app/utils";
+import getMarkdownData from "@app/utils/getMarkdown";
 import { DataProp, NextPageWithLayout } from "@app/types";
 import { Markdown } from "@app/components";
 import { subLinks } from "@app/utils/constants";

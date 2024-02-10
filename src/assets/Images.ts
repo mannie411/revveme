@@ -16,7 +16,7 @@ import mockupBg from "../../public/mockup-bg.svg";
 import mockupFg from "../../public/mockup-bg.svg";
 
 // PNG's
-import revveP from "../../public/revve-p.svg";
+import revveP from "../../public/revveP.svg";
 import revveM from "../../public/revve-mockup.png";
 import cbn from "../../public/cbn.png";
 import ndic from "../../public/ndic.png";
@@ -24,7 +24,8 @@ import ngMd from "../../public/ng-md.png";
 import caMd from "../../public/ca-md.png";
 import ukMd from "../../public/uk-md.png";
 import usMd from "../../public/us-md.png";
-import bgOval from "../../public/Oval@2x.png";
+import bgOval from "../../public/Oval.svg";
+import bgOval2 from "../../public/Oval2.svg";
 
 import aboutImg1 from "../../public/about-1.png";
 import teamImg1 from "../../public/team-1.png";
@@ -60,7 +61,10 @@ import aboutImg2 from "../../public/about-2.png";
 import aboutImg3 from "../../public/about-3.png";
 import aboutImg4 from "../../public/about-4.png";
 
+import qrcode from "../../public/qrcode.png";
+
 export {
+  bgOval2,
   aboutImg2,
   aboutImg3,
   aboutImg4,
@@ -111,4 +115,5 @@ export {
   featureImg5I,
   mockupImg1,
   mockupImg2,
+  qrcode,
 };

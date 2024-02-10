@@ -33,17 +33,17 @@ const Page: NextPageWithLayout = () => {
 
       <View className="my-[6rem]">
         {/* Hero Section */}
-        <section className="max-container px-4 lg:px-[4rem] min-h-screen overflow-y-hidden">
+        <section className="snap-start max-container px-4 lg:px-[4rem] min-h-screen overflow-y-hidden">
           <div className="flex flex-col md:flex-row">
             <div className="relative flex-1  pt-[2rem] md:pt-[6rem] lg:pt-[10rem] ">
-              <h1 className="mb-4 max-sm:text-[1.8rem] lg:mb-8 text-center md:text-start">
+              <h1 className="mb-4 lg:mb-8 text-center md:text-start">
                 <span className="text-primary">Send, Swap, Shop -</span>
                 <br />
                 Your Passport to Easy
                 <br />
                 Worldwide Play.
               </h1>
-              <p className="text-center md:text-start my-6 lg:mb-8 ">
+              <p className="text-center md:text-start my-6 lg:mb-8  max-sm:w-[80%] mx-auto">
                 Perform cross-border transaction with ease on Revve.
               </p>
               <p className="text-center md:text-start my-6 lg:mb-8">
@@ -93,10 +93,12 @@ const Page: NextPageWithLayout = () => {
           </div>
         </section>
         {/* Features Section */}
-        <section className="max-container px-4 lg:px-[4rem]  overflow-y-hidden mb-[6rem]">
+        <section className="snap-start max-container px-4 lg:px-[4rem]  overflow-y-hidden mb-[6rem]">
           <div className="text-center mb-6">
             <p className="text-secondary uppercase my-4">
-              <span className="bg-accent p-3">our key features</span>
+              <span className="bg-accent p-3 max-sm:text-[13px]">
+                our key features
+              </span>
             </p>
             <h2 className="">
               Empower Your Cross-Border <br /> Moves with Reeve
@@ -161,7 +163,7 @@ const Page: NextPageWithLayout = () => {
           </div>
         </section>
         {/* Team Section */}
-        <section className="max-container px-4 lg:px-[4rem] py-[6rem] overflow-y-hidden">
+        <section className="snap-start max-container px-4 lg:px-[4rem] py-[6rem] overflow-y-hidden">
           <div className="text-center">
             <h2 className="mb-3">Meet our Awesome Team</h2>
             <p className="my-8">
@@ -192,12 +194,12 @@ const Page: NextPageWithLayout = () => {
               </div>
             </div>
           </div>
-          <div className="max-container px-4 lg:px-[4rem] my-[6rem] lg:my-[8rem]">
+          <div className="snap-start max-container px-4 lg:px-[4rem] my-[6rem] lg:my-[8rem]">
             <CTA />
           </div>
         </section>
         {/* Contact Section */}
-        <section className="max-container px-4 lg:px-[4rem]  overflow-y-hidden">
+        <section className="snap-start max-container px-4 lg:px-[4rem]  overflow-y-hidden">
           <div className="text-center">
             <h2 className="">Contact Us</h2>
             <p className="my-8">

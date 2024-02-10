@@ -1,20 +1,26 @@
-import fs from "fs";
-import matter from "gray-matter";
-import path from "path";
+import { PlatformOS } from "@app/types";
 
-export function getMarkdownData(filename: string) {
-  // removes the file extension
-  const fileName = filename.replace(/\.md/, "");
-  const filePath = path.join(process.cwd() + "/public", `${fileName}.md`);
-  const fileContent = fs.readFileSync(filePath, "utf-8");
+export const getPlatformOS = (): PlatformOS | null => {
+  const userAgent = window.navigator.userAgent;
+  let os: PlatformOS | null = null;
 
-  const { data, content } = matter(fileContent);
+  const Android = /Android/gi.test(userAgent);
+  const isIOS = /iPad|iPhone|iPod/.test(userAgent);
+  const Linux = /Linux/gi.test(userAgent);
+  const MacOS = /Macintosh|Mac|Mac OS|MacIntel|MacPPC|Mac68K/gi.test(userAgent);
+  const Windows = /'Win32|Win64|Windows|Windows NT|WinCE/gi.test(userAgent);
 
-  return {
-    slug: fileName,
-    ...data,
-    content,
-  };
-}
+  // (/Mac|Mac OS|MacIntel/gi.test(userAgent) && (navigator.maxTouchPoints > 1 || "ontouchend" in document))) && !window.MSStream;
 
-export {};
+  if (Android) return (os = "Android");
+
+  if (isIOS) return (os = "iOS");
+
+  if (MacOS) return (os = "MacOS");
+
+  if (Linux) return (os = "Linux");
+
+  if (Windows) return (os = "Windows");
+
+  return null;
+};

@@ -93,7 +93,7 @@ const Features = () => {
         <div className="flex-1  ">
           <div className="my-4 md:pt-[5rem] lg:pl-[4rem]">
             <h3 className="mb-2">
-              Send and Receive <br /> Money
+              Send and Receive <br className="max-sm:hidden" /> Money
             </h3>
             <p className="text-dark-5 lg:w-[70%] my-4 ">
               Unlock Currency Freedom: Swap foreign currencies for Naira in a

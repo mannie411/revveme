@@ -7,6 +7,7 @@ import Markdown from "./Markdown";
 import NoSSR from "./NoSSR";
 import SocialLinks from "./SocialLinks";
 import Testimonial from "./Testimonial";
+import QRModal from "./QRModal";
 
 export {
   Contact,
@@ -18,5 +19,6 @@ export {
   Markdown,
   NoSSR,
   SocialLinks,
+  QRModal,
   Testimonial,
 };

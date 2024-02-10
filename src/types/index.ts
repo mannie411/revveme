@@ -22,3 +22,5 @@ export type DataProp = {
   content: string;
   slug: string;
 };
+
+export type PlatformOS = "Android" | "iOS" | "Linux" | "MacOS" | "Windows";
