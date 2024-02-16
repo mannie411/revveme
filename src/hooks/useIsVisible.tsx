@@ -14,7 +14,6 @@ const useIsVisible = (ref: any) => {
   const threshold: number = isMobile || isTablet ? 0.5 : 0.8;
 
   useEffect(() => {
-    console.log(rootMargin, threshold);
     const options = {
       root: null, // default, use viewport
       rootMargin,

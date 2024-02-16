@@ -24,13 +24,18 @@ const Button: FC<ButtonProps> = ({
   return (
     <Fragment>
       {variant === "default" && (
-        <button className={`btn ${className && className}`} disabled={disabled}>
+        <button
+          className={`btn ${className ? className : ""}`}
+          disabled={disabled}
+          onClick={onClick}
+          type={type}
+        >
           <span>{label}</span>
         </button>
       )}
       {variant === "icon" && (
         <button
-          className="btn"
+          className={`btn ${className ? className : ""}`}
           onClick={onClick}
           type={type}
           disabled={disabled}

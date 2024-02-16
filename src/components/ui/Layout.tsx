@@ -15,7 +15,9 @@ type LayoutContextProp = {
 };
 
 export const LayoutContext = createContext<LayoutContextProp>({
-  storeRedirect: () => {},
+  storeRedirect: () => {
+    console.log("default");
+  },
 });
 
 const Layout: FC<LayoutProp> = ({ children }) => {
@@ -26,6 +28,8 @@ export const BaseLayout = (page: any) => {
   const [show, setShow] = useState<boolean>(false);
 
   const storeRedirect = () => {
+    console.log("Initiating...");
+
     const platform = getPlatformOS();
 
     if (platform === "Android") {
@@ -35,11 +39,12 @@ export const BaseLayout = (page: any) => {
 
     if (platform === "iOS" || platform === "MacOS") {
       window.open(storeLink.appstore, "_blank");
-
       return;
     }
 
     setShow(true);
+
+    return;
   };
 
   const toogleQRModal = (evt: any) => {
