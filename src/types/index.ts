@@ -24,3 +24,5 @@ export type DataProp = {
 };
 
 export type PlatformOS = "Android" | "iOS" | "Linux" | "MacOS" | "Windows";
+
+export type SiteMode = "isLive" | "isComingSoon" | "isMaintenance";
