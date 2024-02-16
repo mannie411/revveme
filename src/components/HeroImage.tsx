@@ -57,7 +57,7 @@ const HeroImage = () => {
           <g
             id="ca"
             className="animate-shake-vertical"
-            style={{ "--duration": "6s" }}
+            style={{ "--duration": "8s" }}
             clipPath="url(#clip1_712_7807)"
           >
             <path
@@ -153,7 +153,11 @@ const HeroImage = () => {
             />
           </g>
         </g>
-        <g className="animate-wiggle" filter="url(#filter0_d_712_7807)">
+        <g
+          className="animate-wiggle"
+          style={{ "--duration": "8s" }}
+          filter="url(#filter0_d_712_7807)"
+        >
           <circle cx="82" cy="414" r="32" fill="white" />
           <circle cx="82" cy="414" r="32" fill="url(#pattern1)" />
         </g>
@@ -164,7 +168,7 @@ const HeroImage = () => {
         </g>
         <g
           className="animate-wiggle"
-          style={{ "--duration": "2s" }}
+          style={{ "--duration": "8s" }}
           filter="url(#filter2_d_712_7807)"
         >
           <circle cx="587.5" cy="699.5" r="22.5" fill="white" />

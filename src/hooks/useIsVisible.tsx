@@ -1,14 +1,26 @@
+"use client";
 import { useEffect, useState } from "react";
+import useMediaQuery from "./useMediaQuery";
 
-export const useIsVisible = (ref: any) => {
+const useIsVisible = (ref: any) => {
   const [isIntersecting, setIntersecting] = useState(false);
 
+  const isMobile = useMediaQuery("(max-width: 480px)");
+  const isTablet = useMediaQuery("(max-width: 768px)");
+  const isPC = useMediaQuery("(min-width: 768px)");
+
+  const rootMargin: string =
+    isMobile || isTablet ? "-10% 0px 10% 0px" : "100% 0px 100% 0px";
+  const threshold: number = isMobile || isTablet ? 0.5 : 0.8;
+
   useEffect(() => {
+    console.log(rootMargin, threshold);
     const options = {
       root: null, // default, use viewport
-      rootMargin: "50% 0px 50% 0px",
-      threshold: 0.8, // half of item height
+      rootMargin,
+      threshold, // half of item height
     };
+
     const observer = new IntersectionObserver(([entry]) => {
       setIntersecting(entry.isIntersecting);
     }, options);
@@ -19,7 +31,9 @@ export const useIsVisible = (ref: any) => {
     return () => {
       observer.disconnect();
     };
-  }, [ref]);
+  }, [ref, rootMargin, threshold]);
 
   return isIntersecting;
 };
+
+export default useIsVisible;

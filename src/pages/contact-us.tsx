@@ -2,7 +2,14 @@ import React, { Fragment } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import { Footer, Head, Header, BaseLayout, View } from "@app/components/ui";
+import {
+  Footer,
+  Head,
+  Header,
+  BaseLayout,
+  View,
+  Heading,
+} from "@app/components/ui";
 import { Contact, FAQ } from "@app/components";
 import { NextPageWithLayout } from "@app/types";
 import { download } from "@app/assets";
@@ -16,11 +23,17 @@ const Page: NextPageWithLayout = () => {
       <View className="mt-24">
         <section className="max-container px-4 lg:px-[4rem]  overflow-y-hidden">
           <div className="text-center lg:mt-[3rem]">
-            <h2 className="">Contact Us</h2>
-            <p className="my-8">
-              Have any question or feedback, feel free to reach out to us.
-              <br /> We are always available to help.
-            </p>
+            <Heading
+              variants="h2"
+              title="Contact Us"
+              desc={
+                <Fragment>
+                  Have any question or feedback, feel free to reach out to us.
+                  <br className="max-sm:hidden " /> We are always available to
+                  help.
+                </Fragment>
+              }
+            />
           </div>
           <div className="my-[2rem] lg:my-[4rem]">
             <Contact />

@@ -1,7 +1,7 @@
 import React, { Fragment, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { BaseLayout, Head, View } from "@app/components/ui";
+import { BaseLayout, Head, Heading, View } from "@app/components/ui";
 import {
   CTA,
   Contact,
@@ -23,6 +23,7 @@ import {
   teamImg1,
 } from "@app/assets";
 import { useIsVisible } from "@app/hooks";
+import { storeLink } from "@app/utils/constants";
 
 const Page: NextPageWithLayout = () => {
   const ref1 = useRef<HTMLDivElement>(null);
@@ -31,11 +32,11 @@ const Page: NextPageWithLayout = () => {
     <Fragment>
       <Head title="Home" />
 
-      <View className="my-[6rem]">
+      <View className="">
         {/* Hero Section */}
-        <section className="snap-start max-container px-4 lg:px-[4rem] min-h-screen overflow-y-hidden">
-          <div className="flex flex-col md:flex-row">
-            <div className="relative flex-1  pt-[2rem] md:pt-[6rem] lg:pt-[10rem] ">
+        <section className="snap-start max-container px-4 lg:px-[4rem] overflow-y-hidden mt-[6rem]">
+          <div className="flex flex-col  md:items-center md:flex-row min-h-screen ">
+            <div className="relative flex-1 ">
               <h1 className="mb-4 lg:mb-8 text-center md:text-start">
                 <span className="text-primary">Send, Swap, Shop -</span>
                 <br />
@@ -47,10 +48,18 @@ const Page: NextPageWithLayout = () => {
                 Perform cross-border transaction with ease on Revve.
               </p>
               <p className="text-center md:text-start my-6 lg:mb-8">
-                <Link href={"#"} className="inline-block">
+                <Link
+                  href={`${storeLink.playstore}`}
+                  target="_blank"
+                  className="inline-block"
+                >
                   <Image src={playstore} alt="Play store link" />
                 </Link>
-                <Link href={"#"} className="inline-block ml-2">
+                <Link
+                  href={`${storeLink.appstore}`}
+                  target="_blank"
+                  className="inline-block ml-2"
+                >
                   <Image src={appstore} alt="App store link" />
                 </Link>
               </p>
@@ -110,7 +119,7 @@ const Page: NextPageWithLayout = () => {
         {/* About Section */}
         <section className="overflow-y-hidden">
           <FeatureCountries />
-          <div className="max-container flex flex-col lg:flex-row px-4 lg:px-[4rem]  my-[6rem]">
+          <div className="max-container flex flex-col md:flex-row px-4 lg:px-[4rem]  my-[6rem]">
             <div className="flex-1 lg:pt-[6rem] mb-16">
               <h2 className="">About Us</h2>
               <p className="text-[1.125rem] lg:w-[70%] my-10">
@@ -150,12 +159,17 @@ const Page: NextPageWithLayout = () => {
         <section className=" bg-primary  overflow-y-hidden">
           <div className="max-container px-4 lg:px-[4rem] py-[6rem]">
             <div className="my-4">
-              <h2 className="text-center text-white mb-8">
-                What our ‘Revvers’ have to say
-              </h2>
-              <p className="text-center text-white my-8">
-                Great team produces great results. Join the Revve family.
-              </p>
+              <Heading
+                variants="h2"
+                title=" What our ‘Revvers’ have to say"
+                titleClass="text-center text-white mb-8"
+                desc={
+                  <Fragment>
+                    Great team produces great results. Join the Revve family.
+                  </Fragment>
+                }
+                descClass="text-center text-white my-8"
+              />
             </div>
             <div className="max-container my-[2rem]">
               <Testimonial />
@@ -165,11 +179,17 @@ const Page: NextPageWithLayout = () => {
         {/* Team Section */}
         <section className="snap-start max-container px-4 lg:px-[4rem] py-[6rem] overflow-y-hidden">
           <div className="text-center">
-            <h2 className="mb-3">Meet our Awesome Team</h2>
-            <p className="my-8">
-              Here are few of our awesome Team Members who are making <br />
-              waves and of course shipping out products fastly
-            </p>
+            <Heading
+              variants="h2"
+              title="Meet our Awesome Team"
+              desc={
+                <Fragment>
+                  Here are few of our awesome Team Members who are making
+                  <br className="max-sm:hidden " />
+                  waves and of course shipping out products fastly
+                </Fragment>
+              }
+            />
           </div>
           <div className="my-6">
             <Image src={teamImg1} alt="Team" />
@@ -201,13 +221,19 @@ const Page: NextPageWithLayout = () => {
         {/* Contact Section */}
         <section className="snap-start max-container px-4 lg:px-[4rem]  overflow-y-hidden">
           <div className="text-center">
-            <h2 className="">Contact Us</h2>
-            <p className="my-8">
-              Have any question or feedback, feel free to reach out to us.
-              <br /> We are always available to help.
-            </p>
+            <Heading
+              variants="h2"
+              title="Contact Us"
+              desc={
+                <Fragment>
+                  Have any question or feedback, feel free to reach out to us.
+                  <br className="max-sm:hidden " /> We are always available to
+                  help.
+                </Fragment>
+              }
+            />
           </div>
-          <div>
+          <div className="mb-[6rem] md:mb-[8rem]">
             <Contact />
           </div>
         </section>

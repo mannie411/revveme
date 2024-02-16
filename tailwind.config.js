@@ -43,6 +43,7 @@ const config = {
         secondary: "#4F0072",
         dark,
         accent: "#6019800A",
+        success: "#4BB543",
         "coral-red": "#FF6452",
         "slate-gray": "#6D6D6D",
         "pale-blue": "#F5F6FF",
@@ -85,7 +86,7 @@ const config = {
         "slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both",
       "shake-vertical":
         "shake-vertical var(--duration, 8s)  cubic-bezier(0.455, 0.030, 0.515, 0.955) 0.4s infinite both",
-      "spin-right": "spin-right 15s linear infinite",
+      "spin-right": "spin-right  var(--duration, 8s) linear infinite",
       wiggle:
         "wiggle var(--duration, 1s) ease-in-out infinite var(--delay, 0.3s)",
       "wobble-right": "wobble-right 1.8s  infinite both var(--delay, 0.3s)",

@@ -1,7 +1,7 @@
-import React, { Fragment, useRef } from "react";
+import React, { Fragment, useContext, useRef } from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { Button } from "./ui";
+import { useIsVisible } from "@app/hooks";
+import { Button, LayoutContext } from "./ui";
 import {
   caMd,
   featureImg1,
@@ -18,7 +18,6 @@ import {
   ukMd,
   usMd,
 } from "@app/assets";
-import { useIsVisible } from "@app/hooks";
 
 export const FeatureCountries = () => {
   return (
@@ -54,6 +53,8 @@ export const FeatureCountries = () => {
 };
 
 const Features = () => {
+  const { storeRedirect } = useContext(LayoutContext);
+
   const ref1 = useRef<HTMLDivElement>(null);
   const isVisible1 = useIsVisible(ref1);
   const ref2 = useRef<HTMLDivElement>(null);
@@ -67,7 +68,7 @@ const Features = () => {
   return (
     <Fragment>
       {/* Feature 1 */}
-      <div ref={ref1} className="flex flex-col lg:flex-row py-8 ">
+      <div ref={ref1} className="flex flex-col md:flex-row py-8 ">
         <div className="flex-1 overflow-y-hidden">
           <div className="ft-img md:max-w-[80%] mx-auto">
             <div className="relative perspective z-[5] py-1">
@@ -100,12 +101,12 @@ const Features = () => {
               secure and trusted way! Your trusted partner for seamless and
               secure currency exchanges in Nigeria
             </p>
-            <Button label="Get Started" />
+            <Button label="Get Started" onClick={storeRedirect} />
           </div>
         </div>
       </div>
       {/* Feature 2 */}
-      <div ref={ref2} className="flex flex-col lg:flex-row py-8 ">
+      <div ref={ref2} className="flex flex-col md:flex-row py-8 ">
         <div className="flex-1 ">
           <div className="my-4 md:pt-[5rem] md:pl-[4rem] ">
             <h3 className="mb-2">Buy and Sell Currency</h3>
@@ -114,10 +115,10 @@ const Features = () => {
               secure and trusted way! Your trusted partner for seamless and
               secure currency exchanges in Nigeria
             </p>
-            <Button label="Get Started" />
+            <Button label="Get Started" onClick={storeRedirect} />
           </div>
         </div>
-        <div className="flex-1 max-sm:order-first overflow-y-hidden">
+        <div className="flex-1 max-md:order-first overflow-y-hidden">
           <div className="ft-img md:max-w-[80%] mx-auto">
             <div className="relative perspective z-[5] py-1">
               <Image
@@ -141,7 +142,7 @@ const Features = () => {
         </div>
       </div>
       {/* Feature 3 */}
-      <div ref={ref3} className="flex flex-col lg:flex-row py-8 ">
+      <div ref={ref3} className="flex flex-col md:flex-row py-8 ">
         <div className="flex-1 overflow-y-hidden">
           <div className="flex-1  overflow-y-hidden">
             <div className="ft-img md:max-w-[80%] mx-auto">
@@ -174,12 +175,12 @@ const Features = () => {
               secure and trusted way! Your trusted partner for seamless and
               secure currency exchanges in Nigeria
             </p>
-            <Button label="Get Started" />
+            <Button label="Get Started" onClick={storeRedirect} />
           </div>
         </div>
       </div>
       {/* Feature 4 */}
-      <div ref={ref4} className="flex flex-col lg:flex-row py-8 ">
+      <div ref={ref4} className="flex flex-col md:flex-row py-8 ">
         <div className="flex-1 ">
           <div className="my-4 md:pt-[5rem] md:pl-[4rem]">
             <h3 className=" mb-2">Pay Bills</h3>
@@ -188,11 +189,11 @@ const Features = () => {
               secure and trusted way! Your trusted partner for seamless and
               secure currency exchanges in Nigeria
             </p>
-            <Button label="Get Started" />
+            <Button label="Get Started" onClick={storeRedirect} />
           </div>
         </div>
 
-        <div className="flex-1 max-sm:order-first overflow-y-hidden">
+        <div className="flex-1 max-md:order-first overflow-y-hidden">
           <div className="ft-img md:max-w-[80%] mx-auto">
             <div className="relative perspective z-[5] py-1">
               <Image
@@ -216,7 +217,7 @@ const Features = () => {
         </div>
       </div>
       {/* Feature 5 */}
-      <div ref={ref5} className="flex flex-col lg:flex-row py-8 ">
+      <div ref={ref5} className="flex flex-col md:flex-row py-8 ">
         <div className="flex-1  overflow-y-hidden">
           <div className="ft-img md:max-w-[80%] mx-auto">
             <div className="relative perspective z-[5] py-1">
@@ -247,7 +248,7 @@ const Features = () => {
               secure and trusted way! Your trusted partner for seamless and
               secure currency exchanges in Nigeria
             </p>
-            <Button label="Get Started" />
+            <Button label="Get Started" onClick={storeRedirect} />
           </div>
         </div>
       </div>

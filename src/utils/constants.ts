@@ -1,5 +1,17 @@
 import { LinkProps } from "@app/types";
 
+export const apiURL =
+  "https://oj7rchgtvms5n7p545c3thz5lu0kjzyp.lambda-url.us-east-2.on.aws";
+
+export const storeLink = {
+  appstore:
+    "https://apps.apple.com/ng/app/p2vest-loan-insurance-app/id1532393698",
+  playstore: "https://play.google.com/store/apps/details?id=com.p2vest",
+};
+
+export const token =
+  "eyJhbGciOi637748583hdydb36bc93f.eyJpZCI6IjIyIiwidXNlcmlkIjoiMjIiLCJ2YWxpZCI6IjEiLCJuYW1lIjoibG9naW4iLCJpYXQiOjE3MDc0NjQwNDksImV4cCI6MTcwNzQ2NzY0OSwiYXVkIjoiaHR0cHM6Ly9vajdyY2hndHZtczVuN3A1NDVjM3RoejVsdTBranp5cC5sYW1iZGEtdXJsLnVzLWVhc3QtMi5vbi5hd3MiLCJpc3MiOiJodHRwczovL29qN3JjaGd0dm1zNW43cDU0NWMzdGh6NWx1MGtqenlwLmxhbWJkYS11cmwudXMtZWFzdC0yLm9uLmF3cyJ9.ncvhhUJEHSNUSS-sbjJDUISBNCV&93u72048";
+
 export const menuLinks: LinkProps[] = [
   { path: "/", label: "Home" },
   { path: "/about-us", label: "About Us" },

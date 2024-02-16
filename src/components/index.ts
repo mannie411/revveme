@@ -5,9 +5,10 @@ import Features, { FeatureCountries } from "./Features";
 import HeroImage from "./HeroImage";
 import Markdown from "./Markdown";
 import NoSSR from "./NoSSR";
-import SocialLinks from "./SocialLinks";
-import Testimonial from "./Testimonial";
 import QRModal from "./QRModal";
+import SocialLinks from "./SocialLinks";
+import Status from "./Status";
+import Testimonial from "./Testimonial";
 
 export {
   Contact,
@@ -18,7 +19,8 @@ export {
   HeroImage,
   Markdown,
   NoSSR,
-  SocialLinks,
   QRModal,
+  SocialLinks,
+  Status,
   Testimonial,
 };

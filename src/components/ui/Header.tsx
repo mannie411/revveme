@@ -42,13 +42,13 @@ const Header: FC<HeaderProps> = ({ links, variants = "empty", children }) => {
         <Fragment>
           {/* Desktop */}
           <div className=" relative max-container flex items-center justify-between w-full h-16  px-4 py-8 lg:px-[4rem] md:py-[3rem] z-[100] ">
-            <div className="w-[25%] md:w-[10%] ">
+            <div className="w-[15%] md:w-[10%] ">
               <Link href={"/"} className="w-full h-full">
                 <Logo />
               </Link>
             </div>
 
-            <div className="flex justify-between items-center max-lg:hidden w-full ">
+            <div className="hidden md:flex justify-between items-center  w-full ">
               <nav
                 className={`flex  flex-1 items-center  ${
                   children ? "justify-center" : "justify-end"
@@ -72,7 +72,7 @@ const Header: FC<HeaderProps> = ({ links, variants = "empty", children }) => {
             </div>
 
             {links?.length !== 0 && (
-              <div className="hidden max-lg:block">
+              <div className="block md:hidden">
                 {!isToggle && (
                   <span role="button" onClick={() => setIsToggle(!isToggle)}>
                     <MenuIcon />
@@ -90,7 +90,7 @@ const Header: FC<HeaderProps> = ({ links, variants = "empty", children }) => {
           {/* Mobile */}
           <DetectOutsideClick onClickOutside={handleMobileNav}>
             <div
-              className={`absolute shadow-md hidden max-sm:block w-full ${
+              className={`absolute shadow-md md:hidden block w-full ${
                 isToggle
                   ? "show"
                   : "transition-all ease-in-out invisible opacity-0  scale-y-0"

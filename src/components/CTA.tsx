@@ -2,11 +2,12 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { appstoreLight, mockupCTA, playstoreLight } from "@app/assets";
+import { storeLink } from "@app/utils/constants";
 
 const CTA = () => {
   return (
     <div className="cta">
-      <div className="flex flex-col lg:flex-row px-4  lg:px-[4rem] py-[6rem] ">
+      <div className="relative z-10 flex flex-col md:flex-row px-4  lg:px-[4rem] py-[6rem] ">
         <div className="flex-1  my-auto">
           <h3 className="text-center md:text-start text-white">
             Download the Revve
@@ -18,10 +19,10 @@ const CTA = () => {
             and more awesome. Enjoy the amazing experience!!!
           </p>
           <div className="text-center md:text-start">
-            <Link className="inline-block " href="#">
+            <Link className="inline-block " href={`${storeLink.playstore}`}>
               <Image src={playstoreLight} alt="Play store Link" />
             </Link>
-            <Link className="inline-block ml-3" href="#">
+            <Link className="inline-block ml-3" href={`${storeLink.appstore}`}>
               <Image src={appstoreLight} alt="App Store Link" />
             </Link>
           </div>

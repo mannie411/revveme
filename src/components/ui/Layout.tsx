@@ -1,15 +1,22 @@
-import React, { FC, Fragment, useState } from "react";
+import React, { FC, Fragment, useState, createContext } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ComponentProps, LinkProps, PlatformOS } from "@app/types";
+import { ComponentProps } from "@app/types";
 import { Button, Footer, Header } from ".";
 
-import { menuLinks } from "@app/utils/constants";
+import { menuLinks, storeLink } from "@app/utils/constants";
 import { download } from "@app/assets";
 import { getPlatformOS } from "@app/utils";
 import { QRModal } from "..";
 
 interface LayoutProp extends ComponentProps {}
+type LayoutContextProp = {
+  storeRedirect: () => void;
+};
+
+export const LayoutContext = createContext<LayoutContextProp>({
+  storeRedirect: () => {},
+});
 
 const Layout: FC<LayoutProp> = ({ children }) => {
   return <Fragment>{children}</Fragment>;
@@ -18,22 +25,16 @@ const Layout: FC<LayoutProp> = ({ children }) => {
 export const BaseLayout = (page: any) => {
   const [show, setShow] = useState<boolean>(false);
 
-  const redirectToStore = () => {
+  const storeRedirect = () => {
     const platform = getPlatformOS();
 
     if (platform === "Android") {
-      window.open(
-        "https://play.google.com/store/apps/details?id=com.bitly.app&pcampaignid=web_share",
-        "_blank"
-      );
+      window.open(storeLink.playstore, "_blank");
       return;
     }
 
     if (platform === "iOS" || platform === "MacOS") {
-      window.open(
-        "https://apps.apple.com/us/app/bitly-connections-platform/id525106063",
-        "_blank"
-      );
+      window.open(storeLink.appstore, "_blank");
 
       return;
     }
@@ -53,7 +54,7 @@ export const BaseLayout = (page: any) => {
         <Button
           label="Download Revve"
           className="bg-primary text-white rounded py-2 px-3"
-          onClick={redirectToStore}
+          onClick={storeRedirect}
           icon={
             <Image
               className="inline-block ml-2"
@@ -61,9 +62,12 @@ export const BaseLayout = (page: any) => {
               alt="Download revve"
             />
           }
+          variant="icon"
         />
       </Header>
-      {page}
+      <LayoutContext.Provider value={{ storeRedirect }}>
+        {page}
+      </LayoutContext.Provider>
       <Footer />
 
       <QRModal show={show} toogleModal={toogleQRModal} />

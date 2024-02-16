@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import { Head, BaseLayout, View } from "@app/components/ui";
+import { Head, BaseLayout, View, Heading } from "@app/components/ui";
 import { CTA, Contact, FeatureCountries } from "@app/components";
 
 import { NextPageWithLayout } from "@app/types";
@@ -30,10 +30,14 @@ const Page: NextPageWithLayout = () => {
             </div>
             <div className="my-6">
               <div className="flex flex-col lg:flex-row gap-6">
-                <Image className="lg:w-[60%]" src={aboutImg2} alt="Family" />
+                <Image
+                  className="lg:w-[60%] mx-auto"
+                  src={aboutImg2}
+                  alt="Family"
+                />
 
                 <Image
-                  className="lg:w-[40%]"
+                  className="lg:w-[40%] mx-auto"
                   src={aboutImg3}
                   alt="Happy User"
                 />
@@ -52,18 +56,18 @@ const Page: NextPageWithLayout = () => {
               connectivity seamless.
             </p>
           </div>
-          <div className="flex flex-col lg:flex-row my-[6rem]">
-            <h2 className="text-center md:text-start hidden max-sm:block my-12">
+          <div className="flex flex-col lg:flex-row my-[6rem] gap-4">
+            <h2 className="text-center lg:text-start lg:hidden block my-12">
               Our Story
             </h2>
             <div className="flex-1">
-              <Image src={aboutImg4} alt="User story" />
+              <Image className="mx-auto" src={aboutImg4} alt="User story" />
             </div>
-            <div className="flex-1  md:mt-[6rem]">
-              <h2 className="text-center md:text-start hidden md:block">
+            <div className="flex-1  md:mt-[4rem] lg:mt-[6rem]">
+              <h2 className="text-center lg:text-start hidden lg:block">
                 Our Story
               </h2>
-              <p className="text-center md:text-start my-8 lg:w-[80%]">
+              <p className="text-center lg:text-start my-8 lg:w-[80%]">
                 Established in [Year], [Your Company Name] was born out of a
                 passion for innovation and a vision for a world where
                 cross-border transactions are not just transactions but moments
@@ -114,12 +118,17 @@ const Page: NextPageWithLayout = () => {
         {/* Team Section */}
         <section className="max-container px-4 lg:px-[4rem] py-[6rem] overflow-y-hidden">
           <div className="text-center">
-            <h2 className="mb-3">Meet our Awesome Team</h2>
-            <p className="mb-3 max-sm:w-[80%] mx-auto">
-              Here are few of our awesome Team Members who are making
-              <br className="max-sm:hidden " />
-              waves and of course shipping out products fastly
-            </p>
+            <Heading
+              variants="h2"
+              title="Meet our Awesome Team"
+              desc={
+                <Fragment>
+                  Here are few of our awesome Team Members who are making
+                  <br className="max-sm:hidden " />
+                  waves and of course shipping out products fastly
+                </Fragment>
+              }
+            />
           </div>
           <div className="my-[6rem]">
             <Image src={teamImg1} alt="Team" />
@@ -135,11 +144,18 @@ const Page: NextPageWithLayout = () => {
         {/* Contact Section */}
         <section className="max-container px-4 lg:px-[4rem]  overflow-y-hidden">
           <div className="text-center">
-            <h2 className="">Contact Us</h2>
-            <p className="my-8 max-sm:w-[80%] mx-auto">
-              Have any question or feedback, feel free to reach out to us.
-              <br className="max-sm:hidden " /> We are always available to help.
-            </p>
+            <Heading
+              variants="h2"
+              title="Contact Us"
+              desc={
+                <Fragment>
+                  Have any question or feedback, feel free to reach out to us.
+                  <br className="max-sm:hidden " /> We are always available to
+                  help.
+                </Fragment>
+              }
+            />
+            <h2 className=""></h2>
           </div>
           <div className="my-[6rem]">
             <Contact />

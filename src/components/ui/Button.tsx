@@ -4,6 +4,7 @@ import React, { FC, Fragment, ReactElement } from "react";
 type Variant = "default" | "icon";
 
 interface ButtonProps extends ComponentProps {
+  disabled?: boolean;
   icon?: ReactElement | any;
   label: string;
   onClick?: () => void;
@@ -13,6 +14,7 @@ interface ButtonProps extends ComponentProps {
 
 const Button: FC<ButtonProps> = ({
   className,
+  disabled = false,
   icon,
   label,
   onClick,
@@ -22,19 +24,19 @@ const Button: FC<ButtonProps> = ({
   return (
     <Fragment>
       {variant === "default" && (
-        <button
-          className={`btn ${className && className}`}
-          onClick={onClick}
-          type={type}
-        >
-          <span>{label} </span>
-          {icon && icon}
+        <button className={`btn ${className && className}`} disabled={disabled}>
+          <span>{label}</span>
         </button>
       )}
       {variant === "icon" && (
-        <button className="btn">
+        <button
+          className="btn"
+          onClick={onClick}
+          type={type}
+          disabled={disabled}
+        >
           <span>{label}</span>
-          <span>{icon}</span>
+          {icon && <span className="ml-2">{icon}</span>}
         </button>
       )}
     </Fragment>

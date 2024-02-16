@@ -15,7 +15,7 @@ import location from "../../public/Location.svg";
 const Contact = () => {
   return (
     <div className="flex flex-col md:flex-row lg:space-x-2 lg:px-14 ">
-      <div className="my-3">
+      <div className=" flex-1 my-3">
         <div className=" bg-purple-gradient px-[2rem] py-[3rem] lg:p-[3rem] rounded">
           <h4 className="text-white">Contact Information</h4>
           <p className="text-white my-8">
