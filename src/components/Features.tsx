@@ -18,6 +18,7 @@ import {
   ukMd,
   usMd,
 } from "@app/assets";
+import { features } from "@app/utils/constants";
 
 export const FeatureCountries = () => {
   return (
@@ -97,9 +98,7 @@ const Features = () => {
               Send and Receive <br className="max-sm:hidden" /> Money
             </h3>
             <p className="text-dark-5 lg:w-[70%] my-4 ">
-              Unlock Currency Freedom: Swap foreign currencies for Naira in a
-              secure and trusted way! Your trusted partner for seamless and
-              secure currency exchanges in Nigeria
+              {features[0].content}
             </p>
             <Button label="Get Started" onClick={storeRedirect} />
           </div>
@@ -111,9 +110,7 @@ const Features = () => {
           <div className="my-4 md:pt-[5rem] md:pl-[4rem] ">
             <h3 className="mb-2">Buy and Sell Currency</h3>
             <p className="text-dark-5 lg:w-[70%] my-4 ">
-              Unlock Currency Freedom: Swap foreign currencies for Naira in a
-              secure and trusted way! Your trusted partner for seamless and
-              secure currency exchanges in Nigeria
+              {features[1].content}
             </p>
             <Button label="Get Started" onClick={storeRedirect} />
           </div>
@@ -171,9 +168,7 @@ const Features = () => {
           <div className="my-4 md:pt-[5rem] lg:pl-[4rem]">
             <h3 className=" mb-2">Multi- Currency Wallets</h3>
             <p className="text-dark-5 lg:w-[70%] my-4 ">
-              Unlock Currency Freedom: Swap foreign currencies for Naira in a
-              secure and trusted way! Your trusted partner for seamless and
-              secure currency exchanges in Nigeria
+              {features[2].content}
             </p>
             <Button label="Get Started" onClick={storeRedirect} />
           </div>
@@ -185,9 +180,7 @@ const Features = () => {
           <div className="my-4 md:pt-[5rem] md:pl-[4rem]">
             <h3 className=" mb-2">Pay Bills</h3>
             <p className="text-dark-5 lg:w-[70%] my-4 ">
-              Unlock Currency Freedom: Swap foreign currencies for Naira in a
-              secure and trusted way! Your trusted partner for seamless and
-              secure currency exchanges in Nigeria
+              {features[3].content}
             </p>
             <Button label="Get Started" onClick={storeRedirect} />
           </div>
@@ -244,9 +237,7 @@ const Features = () => {
           <div className="my-4 md:pt-[5rem] lg:pl-[4rem]">
             <h3 className=" mb-2">Shop Online</h3>
             <p className="text-dark-5 lg:w-[70%] my-4 ">
-              Unlock Currency Freedom: Swap foreign currencies for Naira in a
-              secure and trusted way! Your trusted partner for seamless and
-              secure currency exchanges in Nigeria
+              {features[4].content}
             </p>
             <Button label="Get Started" onClick={storeRedirect} />
           </div>

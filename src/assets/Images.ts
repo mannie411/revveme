@@ -32,7 +32,8 @@ import teamImg1 from "../../public/team-1.png";
 
 import mockupImg1 from "../../public/mockup-1.png";
 import mockupImg2 from "../../public/mockup-2.png";
-import mockupCTA from "../../public/mockup-cta.png";
+// import mockupCTA from "../../public/mockup-cta.png";
+import mockupCTA from "../../public/cta-mockup.webp";
 
 import featureImg1 from "../../public/mockup-f1.png";
 import featureImg2 from "../../public/mockup-f2.png";

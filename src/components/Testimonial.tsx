@@ -35,21 +35,43 @@ const Testimonial = () => {
         </div>
 
         <div ref={sliderRef} className="flex-1 slides ">
-          {testimonails.map(({ imgUrl, content, name, role }, idx) => (
-            <div key={idx} id={`slide-${idx + 1}`} className="slide ">
-              <div className="flex flex-col items-center justify-center text-center space-y-6">
-                <div>
-                  <Image src={`/${imgUrl}`} alt={name} width={75} height={75} />
-                </div>
-                <p>{content}</p>
+          {testimonails.map(
+            ({ imgUrl, content, name, role, location }, idx) => (
+              <div key={idx} id={`slide-${idx + 1}`} className="slide ">
+                <div className="flex flex-col items-center justify-center text-center space-y-6">
+                  <div>
+                    <Image
+                      src={`/${imgUrl}`}
+                      alt={name}
+                      width={75}
+                      height={75}
+                    />
+                  </div>
+                  <p>{content}</p>
 
-                <div>
-                  <h4>{name}</h4>
-                  <p className="text-[#6C6A89]">{role}</p>
+                  <div>
+                    <p>
+                      <span className=" font-dm-sans font-semibold text-base">
+                        {name}
+                      </span>{" "}
+                      <span>
+                        ({location.name},{" "}
+                        <Image
+                          className="inline-block"
+                          src={location.flag}
+                          width={18}
+                          height={18}
+                          alt="Country Flag"
+                        />
+                        )
+                      </span>
+                    </p>
+                    <p className="text-[#6C6A89]">{role}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            )
+          )}
         </div>
 
         <div className="slider-btn">

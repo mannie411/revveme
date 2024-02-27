@@ -25,12 +25,12 @@ const Page: NextPageWithLayout = () => {
           <div className="text-center lg:mt-[3rem]">
             <Heading
               variants="h2"
-              title="Contact Us"
+              title="Get in touch"
               desc={
                 <Fragment>
-                  Have any question or feedback, feel free to reach out to us.
-                  <br className="max-sm:hidden " /> We are always available to
-                  help.
+                  Do you have any questions or feedback?
+                  <br className="max-sm:hidden " />
+                  We&apos;d love to hear from you.
                 </Fragment>
               }
             />

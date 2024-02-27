@@ -18,7 +18,7 @@ const Heading = ({
   variants = "h2",
 }: Props) => {
   return (
-    <div className={`w-full ${classNames ? classNames : ""}`}>
+    <div className={`w-full mb-8 lg:mb-12 ${classNames ? classNames : ""}`}>
       {variants === "h1" && (
         <h1 className={`mb-3  ${titleClass ? titleClass : ""}`}>{title}</h1>
       )}

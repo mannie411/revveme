@@ -23,7 +23,7 @@ import {
   teamImg1,
 } from "@app/assets";
 import { useIsVisible } from "@app/hooks";
-import { storeLink } from "@app/utils/constants";
+import { about, storeLink } from "@app/utils/constants";
 
 const Page: NextPageWithLayout = () => {
   const ref1 = useRef<HTMLDivElement>(null);
@@ -123,10 +123,7 @@ const Page: NextPageWithLayout = () => {
             <div className="flex-1 lg:pt-[6rem] mb-16">
               <h2 className="">About Us</h2>
               <p className="text-[1.125rem] lg:w-[70%] my-10">
-                A detailed wireframe kit made of comprehensive components to get
-                you started on you next website or landing pageproject. A
-                detailed wireframe kit made of comprehensive components to get
-                you started on you next website or landing pageproject.
+                {about.shortIntro}
               </p>
               <Link href="/about-us">
                 <span className="inline-block">Learn More</span>
@@ -177,7 +174,7 @@ const Page: NextPageWithLayout = () => {
           </div>
         </section>
         {/* Team Section */}
-        <section className="snap-start max-container px-4 lg:px-[4rem] py-[6rem] overflow-y-hidden">
+        <section className="hidden snap-start max-container px-4 lg:px-[4rem] py-[6rem] overflow-y-hidden">
           <div className="text-center">
             <Heading
               variants="h2"
@@ -197,20 +194,18 @@ const Page: NextPageWithLayout = () => {
         </section>
         {/* Faq Section */}
         <section className="overflow-y-hidden">
-          <div className="bg-primary ">
+          <div className="bg-[#F8F4FA]">
             <div className="max-container px-4 lg:px-[10rem] py-[6rem]">
               <div className="">
-                <h2 className="text-center text-white">
-                  Frequently Asked Questions
-                </h2>
-                <p className="text-center text-white my-8">
+                <h2 className="text-center">Frequently Asked Questions</h2>
+                <p className="text-center my-8">
                   Here are some basic questions and answers <br />
                   to help you get started.
                 </p>
               </div>
 
               <div className="lg:px-[10rem] my-10">
-                <FAQ titleColor="text-[#ffffff]" bodyColor="text-[#ffffff]" />
+                <FAQ />
               </div>
             </div>
           </div>
@@ -223,12 +218,12 @@ const Page: NextPageWithLayout = () => {
           <div className="text-center">
             <Heading
               variants="h2"
-              title="Contact Us"
+              title="Get in touch"
               desc={
                 <Fragment>
-                  Have any question or feedback, feel free to reach out to us.
-                  <br className="max-sm:hidden " /> We are always available to
-                  help.
+                  Do you have any questions or feedback?
+                  <br className="max-sm:hidden " />
+                  We&apos;d love to hear from you.
                 </Fragment>
               }
             />

@@ -45,9 +45,13 @@ export const socialLinks = [
 export const testimonails = [
   {
     imgUrl: "testimonial-1.png",
-    name: "James Nduka",
-    content: `“Would confidently recommend this application to anyone looking for a seamless payment and transfer”`,
+    name: "James",
+    content: `"Revve has made sending money abroad so easy! With just a few taps on their app, I can send money securely to my family back home. It's fast, convenient, and reliable. I couldn't ask for more!”`,
     role: "Business Owner",
+    location: {
+      name: "Lagos",
+      flag: "ng.svg",
+    },
   },
   // {
   //   imgUrl: "testimonial-3.png",
@@ -57,15 +61,23 @@ export const testimonails = [
   // },
   {
     imgUrl: "testimonial-2.png",
-    name: "Sarah Anifowoshe",
-    content: `“Would confidently recommend this application to anyone looking for a seamless payment and transfer”`,
+    name: "Sarah",
+    content: `“I love how simple Revve is to use. I normally use it when or shopping or when I want to travel.”`,
     role: "Entrepreneur",
+    location: {
+      name: "Ottawa",
+      flag: "ca.svg",
+    },
   },
   {
     imgUrl: "testimonial-3.png",
-    name: "Grace Faleti",
-    content: `“Would confidently recommend this application to anyone looking for a seamless payment and transfer”`,
+    name: "Grace",
+    content: `“The currency exchange feature has saves me time and money. Highly recommend.”`,
     role: "Student",
+    location: {
+      name: "Chicago",
+      flag: "usa.svg",
+    },
   },
   // {
   //   imgUrl: "testimonial-1.png",
@@ -78,15 +90,15 @@ export const testimonails = [
 export const faq = [
   {
     title: "Is Revve a bank?",
-    content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet`,
+    content: `No, Revve is not a bank. We are a fintech company that specializes in providing innovative solutions for cross-border transactions and financial connectivity. While we offer services that may resemble those of a bank, such as remittance, currency exchange, bill payments, and online shopping, we operate as a platform designed to facilitate these transactions seamlessly and securely, transcending the traditional banking model`,
   },
   {
     title: "Where is Revve available",
-    content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet`,
+    content: `Revve's services are currently available in Nigeria, the United Kingdom, Canada, and the United States of America. We are continually expanding to serve more regions and provide seamless financial solutions to customers globally.`,
   },
   {
     title: "How does Revve work?",
-    content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet`,
+    content: `Revve works simplifies financial transactions with its intuitive mobile app. Users can easily send money across borders, exchange currencies securely, pay bills instantly, and shop online without hassle. Our platform prioritizes security, trust, and innovation, ensuring seamless experiences for individuals and businesses alike. Whether you're sending love to your family or expanding your business globally, Revve is your reliable partner in navigating the world of finance.`,
   },
 ];
 
@@ -113,3 +125,68 @@ export const values = [
     content: `We uphold the highest ethical standards in all our interactions, fostering a culture of honesty and accountability.`,
   },
 ];
+
+export const features = [
+  {
+    title: "Send and Receive Money ",
+    content:
+      "Seamlessly bridge distances with our effortless remittance service. Send love, support, and financial care to your loved ones back home. Your money, your way, delivered swiftly and securely across borders.",
+    link: "",
+    images: [],
+  },
+  {
+    title: "Buy and Sell Currency",
+    content:
+      "Unlock Currency Freedom: Swap foreign currencies for Naira in a secure and trusted way! Your trusted partner for seamless and secure currency exchanges in Nigeria",
+    link: "",
+    images: [],
+  },
+  {
+    title: "Multi- Currency Wallets",
+    content:
+      "Unlock Currency Freedom: Swap foreign currencies for Naira in a secure and trusted way! Your trusted partner for seamless and secure currency exchanges in Nigeria",
+    link: "",
+    images: [],
+  },
+  {
+    title: "Pay Bills",
+    content:
+      "Unlock Currency Freedom: Swap foreign currencies for Naira in a secure and trusted way! Your trusted partner for seamless and secure currency exchanges in Nigeria",
+    link: "",
+    images: [],
+  },
+  {
+    title: "Shop Online",
+    content:
+      "Shop the world from your doorstep – seamless online shopping with us!",
+    link: "",
+    images: [],
+  },
+];
+
+export const about = {
+  intro: `Welcome to Revve, where we break down borders to redefine global transactions. Our unwavering dedication ensures that cross-border transactions are as effortless as those conducted locally. We pride ourselves on a journey fueled by innovation, collaboration, and empowerment, paving the way for a seamless financial future.`,
+  mission: `At Revve, our mission is to empower individuals and businesses by providing seamless financial solutions that transcend borders. We strive to simplify the complexities of currency exchange, remittance, bill payments, and online shopping, making financial transactions effortless and accessible to everyone.`,
+  shortIntro: `Established with a passion for innovation and a vision for seamless cross-border transactions, Revve is your trusted partner in navigating the world of finance. Our commitment to security, trust, and innovation empowers individuals and businesses alike.`,
+  story:
+    "Established in 2024, Revve was born out of a idea that prioritises innovation for cross-border financial transactions. Our top priorities are security, trust, and innovation to empower individuals and businesses with seamless financial solutions.",
+  vision: `Our vision is a world unburdened by the frail barriers of geographical boundaries, where international distances do not stop the formation of transactional relationships. We envision a future where cross-border payments are as effortless and seamless as local transactions.`,
+};
+
+export const cta = {
+  title: "Download  Revve App For Free Now",
+  content: "Enjoy seamless cross-border payments today!",
+};
+
+export const contact = {
+  title: "",
+  content: `Do you have any questions or feedback? We'd love to hear from you.`,
+  email: "",
+  phone: "",
+  socails: {
+    facebook: "",
+    instagram: "",
+    twitter: "",
+    linkedin: "",
+  },
+};
