@@ -24,11 +24,11 @@ const Contact = () => {
           <div className="flex flex-col gap-8">
             <p className="text-white">
               <Image className="inline-block" src={call} alt="Call" />
-              <span className="inline-block ml-3">+29000000000</span>
+              <span className="inline-block ml-3">+2347025003549</span>
             </p>
             <p className="text-white">
               <Image className="inline-block" src={mail} alt="Call" />
-              <span className="inline-block ml-3">hello@mail.com</span>
+              <span className="inline-block ml-3">hello@revveme.com</span>
             </p>
             <p className="text-white">
               <Image className="inline-block" src={location} alt="Call" />
