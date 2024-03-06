@@ -137,10 +137,19 @@ const Features = () => {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>*/}
       {/* Feature 3 */}
       <div ref={ref3} className="flex flex-col md:flex-row py-8 ">
-        <div className="flex-1 overflow-y-hidden">
+        <div className="flex-1  ">
+          <div className="my-4 md:pt-[5rem] lg:pl-[4rem]">
+            <h3 className=" mb-2">Multi- Currency Wallets</h3>
+            <p className="text-dark-5 lg:w-[70%] my-4 ">
+              {features[2].content}
+            </p>
+            <Button label="Get Started" onClick={storeRedirect} />
+          </div>
+        </div>
+        <div className="flex-1 max-md:order-first overflow-y-hidden">
           <div className="flex-1  overflow-y-hidden">
             <div className="ft-img md:max-w-[80%] mx-auto">
               <div className="relative perspective z-[5] py-1">
@@ -162,15 +171,6 @@ const Features = () => {
                 />
               </div>
             </div>
-          </div>
-        </div>
-        <div className="flex-1  ">
-          <div className="my-4 md:pt-[5rem] lg:pl-[4rem]">
-            <h3 className=" mb-2">Multi- Currency Wallets</h3>
-            <p className="text-dark-5 lg:w-[70%] my-4 ">
-              {features[2].content}
-            </p>
-            <Button label="Get Started" onClick={storeRedirect} />
           </div>
         </div>
       </div>
