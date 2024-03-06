@@ -167,7 +167,7 @@ const Features = () => {
                     isVisible3
                       ? "visible animate-slide-in-fwd-center"
                       : "invisible"
-                  } absolute object-contain top-[2.75rem] left-0 md:-left-8 max-sm:w-[50%]`}
+                  } absolute object-contain top-[2.75rem] right-0 md:-right-8 max-sm:w-[50%]`}
                 />
               </div>
             </div>
@@ -176,17 +176,7 @@ const Features = () => {
       </div>
       {/* Feature 4 */}
       <div ref={ref4} className="flex flex-col md:flex-row py-8 ">
-        <div className="flex-1 ">
-          <div className="my-4 md:pt-[5rem] md:pl-[4rem]">
-            <h3 className=" mb-2">Pay Bills</h3>
-            <p className="text-dark-5 lg:w-[70%] my-4 ">
-              {features[3].content}
-            </p>
-            <Button label="Get Started" onClick={storeRedirect} />
-          </div>
-        </div>
-
-        <div className="flex-1 max-md:order-first overflow-y-hidden">
+        <div className="flex-1 overflow-y-hidden">
           <div className="ft-img md:max-w-[80%] mx-auto">
             <div className="relative perspective z-[5] py-1">
               <Image
@@ -203,15 +193,33 @@ const Features = () => {
                   isVisible4
                     ? "visible animate-slide-in-fwd-center"
                     : "invisible"
-                } absolute object-contain top-[2.75rem] right-0 md:-right-8 max-sm:w-[50%]`}
+                } absolute object-contain top-[2.75rem] left-0 md:-left-8 max-sm:w-[50%]`}
               />
             </div>
+          </div>
+        </div>
+        <div className="flex-1 ">
+          <div className="my-4 md:pt-[5rem] md:pl-[4rem]">
+            <h3 className=" mb-2">Pay Bills</h3>
+            <p className="text-dark-5 lg:w-[70%] my-4 ">
+              {features[3].content}
+            </p>
+            <Button label="Get Started" onClick={storeRedirect} />
           </div>
         </div>
       </div>
       {/* Feature 5 */}
       <div ref={ref5} className="flex flex-col md:flex-row py-8 ">
-        <div className="flex-1  overflow-y-hidden">
+        <div className="flex-1">
+          <div className="my-4 md:pt-[5rem] lg:pl-[4rem]">
+            <h3 className=" mb-2">Shop Online</h3>
+            <p className="text-dark-5 lg:w-[70%] my-4 ">
+              {features[4].content}
+            </p>
+            <Button label="Get Started" onClick={storeRedirect} />
+          </div>
+        </div>
+        <div className="flex-1 max-md:order-first overflow-y-hidden">
           <div className="ft-img md:max-w-[80%] mx-auto">
             <div className="relative perspective z-[5] py-1">
               <Image
@@ -228,18 +236,9 @@ const Features = () => {
                   isVisible5
                     ? "visible animate-slide-in-fwd-center"
                     : "invisible"
-                } absolute object-contain top-[2.75rem] left-0 md:-left-8 max-sm:w-[50%]`}
+                } absolute object-contain top-[2.75rem] right-0 md:-right-8 max-sm:w-[50%]`}
               />
             </div>
-          </div>
-        </div>
-        <div className="flex-1">
-          <div className="my-4 md:pt-[5rem] lg:pl-[4rem]">
-            <h3 className=" mb-2">Shop Online</h3>
-            <p className="text-dark-5 lg:w-[70%] my-4 ">
-              {features[4].content}
-            </p>
-            <Button label="Get Started" onClick={storeRedirect} />
           </div>
         </div>
       </div>
