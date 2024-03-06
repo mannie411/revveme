@@ -104,7 +104,7 @@ const Features = () => {
           </div>
         </div>
       </div>
-      {/* Feature 2 */}
+      {/* Feature 2 
       <div ref={ref2} className="flex flex-col md:flex-row py-8 ">
         <div className="flex-1 ">
           <div className="my-4 md:pt-[5rem] md:pl-[4rem] ">
@@ -137,7 +137,7 @@ const Features = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* Feature 3 */}
       <div ref={ref3} className="flex flex-col md:flex-row py-8 ">
         <div className="flex-1 overflow-y-hidden">
