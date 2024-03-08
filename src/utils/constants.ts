@@ -90,7 +90,7 @@ export const testimonails = [
 export const faq = [
   {
     title: "Is Revve a bank?",
-    content: `No, Revve is not a bank. We are a fintech company that specializes in providing innovative solutions for cross-border transactions and financial connectivity. While we offer services that may resemble those of a bank, such as remittance, currency exchange, bill payments, and online shopping, we operate as a platform designed to facilitate these transactions seamlessly and securely, transcending the traditional banking model`,
+    content: `No, Revve is not a bank. We are a fintech company that specializes in providing innovative solutions for cross-border transactions and financial connectivity. While we offer services that may resemble those of a bank, such as remittance,  bill payments, and online shopping, we operate as a platform designed to facilitate these transactions seamlessly and securely, transcending the traditional banking model`,
   },
   {
     title: "Where is Revve available",
@@ -166,7 +166,7 @@ export const features = [
 
 export const about = {
   intro: `Welcome to Revve, where we break down borders to redefine global transactions. Our unwavering dedication ensures that cross-border transactions are as effortless as those conducted locally. We pride ourselves on a journey fueled by innovation, collaboration, and empowerment, paving the way for a seamless financial future.`,
-  mission: `At Revve, our mission is to empower individuals and businesses by providing seamless financial solutions that transcend borders. We strive to simplify the complexities of currency exchange, remittance, bill payments, and online shopping, making financial transactions effortless and accessible to everyone.`,
+  mission: `At Revve, our mission is to empower individuals and businesses by providing seamless financial solutions that transcend borders. We strive to simplify the complexities of  remittance, bill payments, and online shopping, making financial transactions effortless and accessible to everyone.`,
   shortIntro: `Established with a passion for innovation and a vision for seamless cross-border transactions, Revve is your trusted partner in navigating the world of finance. Our commitment to security, trust, and innovation empowers individuals and businesses alike.`,
   story:
     "Established in 2024, Revve was born out of a idea that prioritises innovation for cross-border financial transactions. Our top priorities are security, trust, and innovation to empower individuals and businesses with seamless financial solutions.",
