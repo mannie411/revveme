@@ -42,7 +42,7 @@ h5 {
 
 @layer base {
   h1 {
-    @apply text-xl md:text-xxl lg:text-3xl  text-dark-1 font-bold;
+    @apply text-xl md:text-xxl min-[1200px]:text-3xl  text-dark-1 font-bold;
   }
 
   h2 {
