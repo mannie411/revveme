@@ -58,8 +58,8 @@ const Features = () => {
 
   const ref1 = useRef<HTMLDivElement>(null);
   const isVisible1 = useIsVisible(ref1);
-  const ref2 = useRef<HTMLDivElement>(null);
-  const isVisible2 = useIsVisible(ref2);
+  // const ref2 = useRef<HTMLDivElement>(null);
+  // const isVisible2 = useIsVisible(ref2);
   const ref3 = useRef<HTMLDivElement>(null);
   const isVisible3 = useIsVisible(ref3);
   const ref4 = useRef<HTMLDivElement>(null);

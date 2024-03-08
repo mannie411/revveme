@@ -10,8 +10,8 @@ const useIsVisible = (ref: any) => {
   const isPC = useMediaQuery("(min-width: 768px)");
 
   const rootMargin: string =
-    isMobile || isTablet ? "-10% 0px 10% 0px" : "100% 0px 100% 0px";
-  const threshold: number = isMobile || isTablet ? 0.5 : 0.8;
+    isMobile || isTablet ? "-10% 0px 10% 0px" : "5% 0px 5% 0px";
+  const threshold: number = isMobile || isTablet ? 0.4 : 0.6;
 
   useEffect(() => {
     const options = {

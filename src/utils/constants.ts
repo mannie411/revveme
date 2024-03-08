@@ -98,7 +98,7 @@ export const faq = [
   },
   {
     title: "How does Revve work?",
-    content: `Revve works simplifies financial transactions with its intuitive mobile app. Users can easily send money across borders, exchange currencies securely, pay bills instantly, and shop online without hassle. Our platform prioritizes security, trust, and innovation, ensuring seamless experiences for individuals and businesses alike. Whether you're sending love to your family or expanding your business globally, Revve is your reliable partner in navigating the world of finance.`,
+    content: `Revve works simplifies financial transactions with its intuitive mobile app. Users can easily send money across borders, pay bills instantly, and shop online without hassle. Our platform prioritizes security, trust, and innovation, ensuring seamless experiences for individuals and businesses alike. Whether you're sending love to your family or expanding your business globally, Revve is your reliable partner in navigating the world of finance.`,
   },
 ];
 

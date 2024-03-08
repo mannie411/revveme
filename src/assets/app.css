@@ -167,7 +167,7 @@ h5 {
   .slides .slide {
     @apply shrink-0 snap-always flex-none
     grow-0 snap-center overflow-hidden  max-sm:w-[20rem]
-    md:max-w-[22rem] bg-white shadow-xl rounded-md px-[4rem] py-[6rem];
+    md:max-w-[22rem] bg-white shadow-xl rounded-md p-8 md:p-[4rem];
   }
 
   .ft-img {

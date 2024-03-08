@@ -34,11 +34,11 @@ const Page: NextPageWithLayout = () => {
 
       <View className="">
         {/* Hero Section */}
-        <section className="snap-start max-container px-4 lg:px-[4rem] overflow-y-hidden mt-[6rem]">
+        <section className="snap-start max-container px-4 lg:px-[4rem] overflow-y-hidden max-sm:mt-[6rem]">
           <div className="flex flex-col  md:items-center md:flex-row min-h-screen ">
             <div className="relative flex-1 ">
               <h1 className="mb-4 lg:mb-8 text-center md:text-start">
-                <span className="text-primary">Send, Swap, Shop -</span>
+                <span className="text-primary">Send, Spend, Shop -</span>
                 <br />
                 Your Passport to Easy
                 <br />

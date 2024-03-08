@@ -28,17 +28,19 @@ const Testimonial = () => {
   return (
     <div className="slider ">
       <div className="flex items-center ">
-        <div className="slider-btn">
-          <button id="prev" className="slider-btn" onClick={gotoPrevSlide}>
-            <Image src={roundleft} alt="Left Arrow" />
-          </button>
-        </div>
+        {testimonails.length >= 3 && (
+          <div className="slider-btn">
+            <button id="prev" className="slider-btn" onClick={gotoPrevSlide}>
+              <Image src={roundleft} alt="Left Arrow" />
+            </button>
+          </div>
+        )}
 
         <div ref={sliderRef} className="flex-1 slides ">
           {testimonails.map(
             ({ imgUrl, content, name, role, location }, idx) => (
               <div key={idx} id={`slide-${idx + 1}`} className="slide ">
-                <div className="flex flex-col items-center justify-center text-center space-y-6">
+                <div className="flex flex-col items-center justify-evenly text-center space-y-6">
                   <div>
                     <Image
                       src={`/${imgUrl}`}
@@ -73,12 +75,13 @@ const Testimonial = () => {
             )
           )}
         </div>
-
-        <div className="slider-btn">
-          <button id="next" onClick={gotoNextSlide}>
-            <Image src={roundRight} alt="Right Arrow" />
-          </button>
-        </div>
+        {testimonails.length >= 3 && (
+          <div className="slider-btn">
+            <button id="next" onClick={gotoNextSlide}>
+              <Image src={roundRight} alt="Right Arrow" />
+            </button>
+          </div>
+        )}
       </div>
 
       <div className="my-16">

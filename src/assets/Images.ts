@@ -17,7 +17,7 @@ import mockupFg from "../../public/mockup-bg.svg";
 
 // PNG's
 import revveP from "../../public/revveP.svg";
-import revveM from "../../public/revve-mockup.png";
+import revveM from "../../public/revve-mockup.webp";
 import cbn from "../../public/cbn.png";
 import ndic from "../../public/ndic.png";
 import ngMd from "../../public/ng-md.png";
