@@ -150,15 +150,13 @@ export const features = [
   },
   {
     title: "Pay Bills",
-    content:
-      "Unlock Currency Freedom: Swap foreign currencies for Naira in a secure and trusted way! Your trusted partner for seamless and secure currency exchanges in Nigeria",
+    content: `Say goodbye to long queues and endless processes—our platform offers a seamless solution for paying bills instantly without any hiccups.`,
     link: "",
     images: [],
   },
   {
     title: "Shop Online",
-    content:
-      "Shop the world from your doorstep – seamless online shopping with us!",
+    content: `Experience the world at your fingertips with our seamless online shopping platform. From the latest fashion trends to must-have gadgets, shop the world's best brands and products from the comfort of your own home.`,
     link: "",
     images: [],
   },
