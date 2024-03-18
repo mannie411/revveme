@@ -30,10 +30,10 @@ const Contact = () => {
               <Image className="inline-block" src={mail} alt="Call" />
               <span className="inline-block ml-3">hello@revveme.com</span>
             </p>
-            <p className="text-white">
+            {/* <p className="text-white">
               <Image className="inline-block" src={location} alt="Call" />
               <span className="ml-3">33, New york City. United States.</span>
-            </p>
+            </p> */}
           </div>
           <div className="h-[5rem]" />
 

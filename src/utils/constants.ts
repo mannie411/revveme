@@ -62,7 +62,7 @@ export const testimonails = [
   {
     imgUrl: "testimonial-2.png",
     name: "Sarah",
-    content: `“I love how simple Revve is to use. I normally use it when or shopping or when I want to travel.”`,
+    content: `“I love how simple Revve is to use. I always use the app when shopping online or making payments when I travel.”`,
     role: "Entrepreneur",
     location: {
       name: "Ottawa",
@@ -72,7 +72,7 @@ export const testimonails = [
   {
     imgUrl: "testimonial-3.png",
     name: "Grace",
-    content: `“The currency exchange feature has saves me time and money. Highly recommend.”`,
+    content: `“The instant money transfer feature has saves me time and money. Highly recommend!”`,
     role: "Student",
     location: {
       name: "Chicago",
@@ -98,7 +98,7 @@ export const faq = [
   },
   {
     title: "How does Revve work?",
-    content: `Revve works simplifies financial transactions with its intuitive mobile app. Users can easily send money across borders, pay bills instantly, and shop online without hassle. Our platform prioritizes security, trust, and innovation, ensuring seamless experiences for individuals and businesses alike. Whether you're sending love to your family or expanding your business globally, Revve is your reliable partner in navigating the world of finance.`,
+    content: `Revve simplifies financial transactions with its intuitive mobile app. Users can easily send money across borders, pay bills instantly, and shop online without hassle. Our platform prioritizes security, trust, and innovation to ensure seamless experiences for individuals and businesses alike. Whether you're sending love to your family or expanding your business globally, Revve is your reliable partner in navigating the world of finance.`,
   },
 ];
 

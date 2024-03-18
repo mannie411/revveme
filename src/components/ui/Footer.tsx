@@ -17,9 +17,9 @@ const Footer: FC<FooterProps> = ({ children }) => {
             <Image src={logoWhite} alt="Logo" />
           </div>
           <p className="text-white my-8">
-            Hello, we are moduscreate. Our goal is to translate the positive
-            effects from revolutionizing how companies engage with their clients
-            & their team
+            Whether you&apos;re sending love to your family or expanding your
+            business globally, Revve is your reliable partner in navigating the
+            world of finance.
           </p>
           <div className="text-center md:text-start">
             <Link

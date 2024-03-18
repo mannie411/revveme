@@ -31,11 +31,10 @@ const Page: NextPageWithLayout = () => {
   return (
     <Fragment>
       <Head title="Home" />
-
       <View className="">
         {/* Hero Section */}
-        <section className="snap-start max-container px-4 lg:px-[4rem] overflow-y-hidden max-sm:mt-[6rem]">
-          <div className="flex flex-col  md:items-center md:flex-row min-h-screen ">
+        <section className="snap-start max-container px-4 lg:px-[4rem] overflow-y-hidden ">
+          <div className="flex flex-col  md:items-center md:flex-row lg:min-h-screen max-sm:mb-[6rem] max-lg:my-[8rem]">
             <div className="relative flex-1 ">
               <h1 className="mb-4 lg:mb-8 text-center md:text-start">
                 <span className="text-primary">Send, Spend, Shop -</span>
@@ -64,7 +63,7 @@ const Page: NextPageWithLayout = () => {
                 </Link>
               </p>
               <p className="text-dark-3 text-center md:text-start">
-                <span className="inline-block ">
+                <span className="block lg:inline-block mb-4">
                   Fully Licensed by the CBN
                   <Image
                     className="inline-block ml-2"
@@ -72,7 +71,7 @@ const Page: NextPageWithLayout = () => {
                     alt="CBN Logo"
                   />
                 </span>
-                <span className="inline-block  md:ml-3">
+                <span className="block lg:inline-block  lg:ml-4">
                   Deposits insured by
                   <Image
                     className="inline-block ml-2"
@@ -102,7 +101,7 @@ const Page: NextPageWithLayout = () => {
           </div>
         </section>
         {/* Features Section */}
-        <section className="snap-start max-container px-4 lg:px-[4rem]  overflow-y-hidden mb-[6rem]">
+        <section className="snap-start max-container px-4 lg:px-[4rem]  overflow-y-hidden mb-[6rem] ">
           <div className="text-center mb-6">
             <p className="text-secondary uppercase my-4">
               <span className="bg-accent p-3 max-sm:text-[13px]">
