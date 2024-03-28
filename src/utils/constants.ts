@@ -144,7 +144,7 @@ export const features = [
   {
     title: "Multi- Currency Wallets",
     content:
-      "Unlock Currency Freedom: Swap foreign currencies for Naira in a secure and trusted way! Your trusted partner for seamless and secure currency exchanges in Nigeria",
+      "Facilitate effortless management of multiple wallets, each dedicated to a specific currency, streamlining transactions and storage across various currencies. Enhance user experience with tailored wallets for different currencies, empowering efficient financial management and flexibility in global transactions",
     link: "",
     images: [],
   },

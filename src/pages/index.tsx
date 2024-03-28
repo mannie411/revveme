@@ -151,7 +151,7 @@ const Page: NextPageWithLayout = () => {
             </div>
           </div>
         </section>
-        {/* Testimonial Section */}
+        {/* Testimonial Section 
         <section className=" bg-primary  overflow-y-hidden">
           <div className="max-container px-4 lg:px-[4rem] py-[6rem]">
             <div className="my-4">
@@ -172,6 +172,7 @@ const Page: NextPageWithLayout = () => {
             </div>
           </div>
         </section>
+        */}
         {/* Team Section */}
         <section className="hidden snap-start max-container px-4 lg:px-[4rem] py-[6rem] overflow-y-hidden">
           <div className="text-center">
